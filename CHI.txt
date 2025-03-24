@@ -11,7 +11,7 @@ Settings
 	building cost increase:110%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, https://raw.githubusercontent.com/kasperja/CHI/main/BlankSpritesheet.png
-	stylesheet:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/SciFi-Temp-CSS-yellow.txt
+	stylesheet:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/CHICSS.txt
 	no particles
 	no bulk particles
 
