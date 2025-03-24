@@ -66,7 +66,7 @@ Layout
 		
 Buttons
 	*creditButton
-		name:Test2 Name
+		name:Test3 Name
 		desc:Press the button to earn Credits.
 		on click:anim icon wobble
 		on click:yield 1 credit
