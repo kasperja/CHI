@@ -275,6 +275,14 @@ color: #00110e;
 background: #ffc000;
 
 }
+
+.building:active, .upgrade:active{
+
+color: #ffc000;
+background: #00110e;
+
+}
+
 #bulkDisplay{
 position: absolute;
 left: 0%;
