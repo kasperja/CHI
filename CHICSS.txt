@@ -1,11 +1,11 @@
 #game
   {
-    background:#150c01;
+    background:#00110e;
 	background-size: cover;
 	font-family: DejaVu Sans Mono, monospace;
 	letter-spacing: 1px;
 	font-stretch: ultra-expanded
-    color:#d0ff00;
+    color:#ffc000;
   }
 
 
@@ -24,12 +24,12 @@
 	min-height:32px;
 	z-index:100;
 	position:absolute;
-	color:#d0ff00 !important;
+	color:#ffc000 !important;
 }
 .box-header,.box-footer,.box-bit
 {
-	background:#d0ff00;
-	color:#150c01;
+	background:#ffc000;
+	color:#00110e;
 	
 }
 
@@ -118,14 +118,14 @@ margin-bottom: 1%;
 }
 .thing:hover,.thing.lit
 {
-	background:#d0ff00;
+	background:#ffc000;
 }
 
 
 
 .upgrade.owned,.achiev.owned
 {
-	color:#d0ff00;
+	color:#ffc000;
 	background:#00000000;
 }
 .thing-text,.thing-costs{
@@ -246,8 +246,8 @@ height: 10px;
 	content: '';
     position: absolute;
     top: 0; left: 0;
-    border-top: 16px solid #150c01;
-    border-right: 16px solid #d0ff00;
+    border-top: 16px solid #00110e;
+    border-right: 16px solid #ffc000;
     width: 0;
 }
 
@@ -258,21 +258,21 @@ height: 10px;
 
 #box-buildings, #box-upgrades{
 top: 32px;
-border: thick solid #d0ff00;
-color:#d0ff00;
+border: thick solid #ffc000;
+color:#ffc000;
 }
 
 #box-buildings2, #box-upgrades2{
 top: 51%;
 margin-top: 32px;
-border: thick solid #d0ff00;
-color:#d0ff00;
+border: thick solid #ffc000;
+color:#ffc000;
 }
 
 .building:hover, .upgrade:hover{
 
-color: #150c01;
-background: #d0ff00;
+color: #00110e;
+background: #ffc000;
 
 }
 #bulkDisplay{
@@ -303,16 +303,16 @@ margin-top: 32px;
 left: 0% !important;
 bottom: 0%;
 width: 86% !important;
-background:#150c01;
-color:#d0ff00;
-border: thick solid #d0ff00;
+background:#00110e;
+color:#ffc000;
+border: thick solid #ffc000;
 
 	margin-left: 2%;
 	margin-right: 2%;
 }
 #logOuter{
-background:#150c01;
-color:#d0ff00;
+background:#00110e;
+color:#ffc000;
 
 
 }
@@ -320,8 +320,8 @@ color:#d0ff00;
 display: flex;
 flex-direction: column;
 padding: 5%;
-background:#150c01;
-color:#d0ff00;
+background:#00110e;
+color:#ffc000;
 overflow:auto;
 }
  
@@ -361,16 +361,16 @@ width: 0.5vw !important;
     width: 0.5vw !important;
 }
 #log::-webkit-scrollbar-thumb, #box-upgrades::-webkit-scrollbar-thumb, #box-buildings::-webkit-scrollbar-thumb, #box-upgrades2::-webkit-scrollbar-thumb, #box-buildings2::-webkit-scrollbar-thumb {
-   background: #d0ff0099 !important;
+   background: #ffc00099 !important;
     box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
 }
 #log::-webkit-scrollbar-thumb:hover, #box-upgrades::-webkit-scrollbar-thumb:hover, #box-buildings::-webkit-scrollbar-thumb:hover, #box-upgrades2::-webkit-scrollbar-thumb:hover, #box-buildings2::-webkit-scrollbar-thumb:hover {
-   background: #d0ff00 !important;
+   background: #ffc000 !important;
     box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
 }
 
 #log::-webkit-scrollbar-track, #box-upgrades::-webkit-scrollbar-track, #box-buildings::-webkit-scrollbar-track, #box-upgrades2::-webkit-scrollbar-track, #box-buildings2::-webkit-scrollbar-track {
-   background: #150c01 !important;
+   background: #00110e !important;
     box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
   
 }
@@ -395,12 +395,12 @@ background-size: contain !important;
 }
 
 .popup, #tooltip, .toast {
-    background: #150c01;
-    color: #d0ff00 ;
+    background: #00110e;
+    color: #ffc000 ;
     border-radius: 0px;
     box-sizing: border-box;
     padding: 8px 8px;
- 	border: thick solid #d0ff00;
+ 	border: thick solid #ffc000;
 	box-shadow: none !important;
 	text-shadow: none !important;
 
@@ -409,7 +409,7 @@ font-weight:bold;
 
  
 #tooltipContent{
-color: #d0ff00;
+color: #ffc000;
 font-weight: 100;
  
 font-weight:bold;
@@ -417,7 +417,7 @@ font-weight:bold;
 
 #tooltip .desc, .listing.b, .listing b, .desc b{
 
-color: #d0ff00;
+color: #ffc000;
 
 }
 #tooltip .thing-icon{
@@ -426,7 +426,7 @@ color: #d0ff00;
 border: 0px !important;
 box-shadow: none !important;
 text-shadow: none !important;
-color: #d0ff00;
+color: #ffc000;
 visibility: hidden;
 }
 #box-things-sortup, #box-things-sortup2, #box-things-Upgrades, #box-things-upgrades2  /*if necessary, change this to the name of the box containing your upgrades. it should start with "box-things" and you can use inspect element to find it*/
@@ -456,15 +456,15 @@ visibility: hidden;
 }
 .achiev:hover{
 margin-right: -1px;
-border: 1px solid #d0ff00;
-color: #150c01;
-background: #d0ff00;
+border: 1px solid #ffc000;
+color: #00110e;
+background: #ffc000;
 
 }.achiev{
 margin-right: -1px;
-border: 1px solid #d0ff00;
-color: #d0ff00;
-background: #150c01;
+border: 1px solid #ffc000;
+color: #ffc000;
+background: #00110e;
 
 }
 
@@ -472,29 +472,29 @@ background: #150c01;
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
-    background: #150c01;
+    background: #00110e;
     box-shadow: none;
     padding: 4px 6px;
     margin: 2px;
     position: relative;
-border: 1px solid #d0ff0099;
+border: 1px solid #ffc00099;
 }
 .systemButton:hover {
     
-    background: #150c01;
+    background: #00110e;
     
-border: 1px solid #d0ff00;
+border: 1px solid #ffc000;
 }
 
 .tickbox.on:before {
-    background: #d0ff00;
+    background: #ffc000;
 	box-shadow: none;
 }
 
 .tickbox, .footerTitle{
-color: #d0ff00;
+color: #ffc000;
 }
 
 .tickbox:before{
-background: #150c01;
+background: #00110e;
 }
