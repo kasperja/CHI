@@ -1,5 +1,5 @@
 Let's make a game!
-	name:Sci-Fi Template
+	name:Cargohold Idle
 	by:Kasperja
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
