@@ -277,7 +277,7 @@ background: #ffc000;
 }
 
 .building:active, .upgrade:active{
-
+transition: 1s;
 color: #ffc000;
 background: #00110e;
 
