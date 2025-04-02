@@ -1646,7 +1646,7 @@ Upgrades
 
 *ResetPrestige
 		name:Gain Anomaly Fragments.
-		text:Sell all cargo and modules for <b><#ffffff>[tkor2*0.00000000001]</b></#> Anomaly Fragments<//><.>The amount is directly proporsional to total Koros earned (previous runs included).
+		text:Sell all cargo and modules for <b><#ffffff>[tkor2*0.00000000001]</b></#> Anomaly Fragments<//><.>The amount is directly proporsional to total Koros earned.<//>(previous runs included).
 		desc:Sell all cargo and modules for <b>[tkor2*0.01]</b> Anomaly Fragments.<//><b>Effect:</b><.>Gain Anomaly Fragments, directly proporsional to total Koros. -[tkor]-[tkor2]-
 		tag:prestige upgrades2
 		req:tkor>600000000000 and prestigio<1000000000000000000000000000000000000000000
