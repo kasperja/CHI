@@ -263,6 +263,7 @@ color:#ffc000;
 }
 
 #box-buildings2, #box-upgrades2{
+
 top: 51%;
 margin-top: 32px;
 border: thick solid #ffc000;
@@ -270,14 +271,14 @@ color:#ffc000;
 }
 
 .building:hover, .upgrade:hover{
-
+transition: 0.2s;
 color: #00110e;
 background: #ffc000;
 
 }
 
 .building:active, .upgrade:active{
-transition: 1s;
+transition: 0.3s;
 color: #ffc000;
 background: #00110e;
 
@@ -341,20 +342,20 @@ width: 100%;
 }
 
 .wobble {
-    animation: wobble 0.5s;
-    animation-duration: 0.5s;
+    animation: wobble 1.5s;
+    animation-duration: 1.5s;
     transition: transform 1.00s ease-out;
    
 }
  
 @keyframes wobble {
 0% {
-    opacity: 0.7;
+    opacity: 0.6;
     transform: scale(1);
 }
-5% {
+20% {
     opacity: 1;
-    transform: scale(0.9);
+    transform: scale(1);
 }
 100%
     opacity: 1;
@@ -423,7 +424,7 @@ font-weight: 100;
 font-weight:bold;
 }
 
-#tooltip .desc, .listing.b, .listing b, .desc b{
+#tooltip .desc, .listing.b, .listing b{
 
 color: #ffc000;
 
@@ -457,6 +458,11 @@ visibility: hidden;
 }
 .upgrade.notOwned {
     order:3;
+}
+.tag-zortMiddle{
+
+  order: 2;
+
 }
 .upgrade.owned, .upgrade2.owned
 {
@@ -505,4 +511,46 @@ color: #ffc000;
 
 .tickbox:before{
 background: #00110e;
+}
+.res .thing-text{
+
+/*font-size: 2vh;
+padding: 1vh;
+letter-spacing: 0.1vh;*/
+}
+
+.tag-auchouse{
+
+transition: 0.2s;
+color: #00110e !important;
+background: #ffc000 !important;
+
+
+}.tag-auchouse:active{
+
+transition: 0.2s;
+color: #ffc000 !important;
+background: #00110e !important;
+
+
+}
+
+#game.filtersOn .shadowed{
+
+
+filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.0));
+
+}
+
+.thing.bigButton:hover, .thing-icon:hover {
+background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 0.00s ease-out;
+    transition: transform 0.00s ease-in;
+	
+	
+}.thing.bigButton:hover .thing-icon{transform:scale(1);}
+
+#tooltip .thing-icon{
+display: none;
 }
