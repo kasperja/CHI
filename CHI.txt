@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
 	updated:18/03/2025
-	version:1.0
+	version:0.6
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -72,8 +72,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.0</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.0</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.6</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.6</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -1646,7 +1646,7 @@ Upgrades
 
 *ResetPrestige
 		name:Gain Anomaly Fragments.
-		text:Sell all cargo and modules for <b><#ffffff>[tkor2*0.00000000001]</b></#> Anomaly Fragments<//><.>The amount is directly proporsional to total Koros earned.<//>(previous runs included).
+		text:Sell all cargo and modules for <b><#ffffff>[tkor2*0.00000000001]</b></#> Anomaly Fragments<//><.>The amount is directly proporsional to total Koros earned.<//>(previous runs included)
 		desc:Sell all cargo and modules for <b>[tkor2*0.01]</b> Anomaly Fragments.<//><b>Effect:</b><.>Gain Anomaly Fragments, directly proporsional to total Koros. -[tkor]-[tkor2]-
 		tag:prestige upgrades2
 		req:tkor>600000000000 and prestigio<1000000000000000000000000000000000000000000
