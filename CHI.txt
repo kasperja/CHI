@@ -1784,7 +1784,7 @@ Upgrades
 		name:Gain Shadow Core
 		desc:Reset everything, <b>even your Anomaly Fragments</b>, gaining <b>1</b> Shadow Core.<//><b>Effect:</b><.>Complete the game and start from scratch with a Shadow Core.
 		tag:prestige upgrades2
-		req:tkor>600000000000 and 1000000000000000000000000000000000000000000 tkor2
+		req:tkor>600000000000 and tkor2>=1000000000000000000000000000000000000000000
 		on earn:log <b>You gain a Shadow Core.
 		on earn:
 			lose notTag:prestige2
