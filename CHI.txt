@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.6
+	version:0.7
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -72,8 +72,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.6</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.6</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.7</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.7</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -915,7 +915,7 @@ Buildings
 		name:Zero-G Storages
 		desc:Eliminates gravitational stress, keeping delicate items secure.<//><b>Effect:</b><.>Produces 2,000,000 Koros every second.
 		icon:icons[10,12]
-		cost:30000000000 koros, 1000 Biofuel
+		cost:3000000000 koros, 100 Biofuel
 		on tick:yield 2000000 koros
 		on tick:yield 2000000 tkor
 		on tick:yield 2000000 tkor2
@@ -925,17 +925,17 @@ Buildings
 		name:Quantum Computing Nodes
 		desc:Process complex calculations at superluminal speeds using quantum states.<//><b>Effect:</b><.>Produces 8,000,000 Koros every second.
 		icon:icons[10,12]
-		cost:80000000000 koros, 50000 Ice, 10000 Biofuel
+		cost:8000000000 koros, 5000 Ice, 1000 Biofuel
 		on tick:yield 8000000 koros
 		on tick:yield 8000000 tkor
 		on tick:yield 8000000 tkor2
-		req:100000000000 tkor
+		req:10000000000 tkor
 		
 	*XenoSeal|XenoSeals
 		name:Xenotech Seals
 		desc:Creates impenetrable barriers using unknown extraterrestrial technology.<//><b>Effect:</b><.>Produces 40,000,000 Koros every second.
 		icon:icons[10,12]
-		cost:160000000000 koros,  10000 Biofuel, 80000 Plasma, 10 prestigio
+		cost:16000000000 koros, 8000 Plasma, 10 prestigio
 		on tick:yield 40000000 koros
 		on tick:yield 40000000 tkor
 		on tick:yield 40000000 tkor2
@@ -945,7 +945,7 @@ Buildings
 		name:Matter Phase Lockers
 		desc:Shifts cargo between dimensions for ultimate security and storage efficiency.<//><b>Effect:</b><.>Produces 300,000,000 Koros every second.
 		icon:icons[10,12]
-		cost:460000000000 koros,  100000 Biofuel, 400000 Plasma, 50 prestigio
+		cost:40000000000 koros,  10000 Biofuel, 50 prestigio
 		on tick:yield 300000000 koros
 		on tick:yield 300000000 tkor
 		on tick:yield 300000000 tkor2
@@ -983,9 +983,70 @@ Buildings
 		on tick:yield 0.1 Biofuel
 		on tick:yield 0.1 tbio
 		on tick:yield 0.1 tbio2
-		req:3000000000 tkor
+		req:300000000 tkor
 		tag: buildings2
 		
+	*CryoFlare|CryoFlares
+		name:CryoFlare Reactor
+		desc:Harnesses extreme thermal fluctuations to generate both searing plasma and subzero ice.<//><b>Effect:</b><.>Produces 1 Ice every 5 seconds. <.>Produces 1 Plasma every 5 seconds.
+		icon:icons[10,12]
+		cost:5000000000 koros
+		on tick:yield 0.2 Plasma
+		on tick:yield 0.2 tplas
+		on tick:yield 0.2 tplas2
+		on tick:yield 0.2 Ice
+		on tick:yield 0.2 tice
+		on tick:yield 0.2 tice2
+		req:5000000000 tkor
+		tag: buildings2
+		
+	*FrostEngine|FrostEngines
+		name:Frostbloom Engine
+		desc:Converts biomass into fuel while generating cryogenic byproducts.<//><b>Effect:</b><.>Produces 1 Ice every 5 seconds. <.>Produces 1 Biofuel every 5 seconds.
+		icon:icons[10,12]
+		cost:50000000000 koros
+		on tick:yield 0.2 Ice
+		on tick:yield 0.2 tice
+		on tick:yield 0.2 tice2
+		on tick:yield 0.2 Biofuel
+		on tick:yield 0.2 tbio
+		on tick:yield 0.2 tbio2
+		req:50000000000 tkor
+		tag: buildings2
+		
+	*BioSynth|BioSynths
+		name:BioSynth Core
+		desc:Produces biofuel, plasma, and ice through temperature and energy manipulation.<//><b>Effect:</b><.>Produces 1 Ice every 2 seconds. <.>Produces 1 Plasma every 2 seconds. <.>Produces 1 Biofuel every 2 seconds.
+		icon:icons[10,12]
+		cost:1000000000000 koros
+		on tick:yield 0.5 Plasma
+		on tick:yield 0.5 tplas
+		on tick:yield 0.5 tplas2
+		on tick:yield 0.5 Biofuel
+		on tick:yield 0.5 tbio
+		on tick:yield 0.5 tbio2
+		on tick:yield 0.5 Ice
+		on tick:yield 0.5 tice
+		on tick:yield 0.5 tice2
+		req:1000000000000 tkor
+		tag: buildings2
+		
+	*XenoSynth|XenoSynths
+		name:XenoSynth Reactor
+		desc:A highly advanced reactor powered by alien fusion technology, generating biofuel, plasma, and ice.<//><b>Effect:</b><.>Produces 20 Ice every seconds. <.>Produces 10 Plasma every seconds. <.>Produces 5 Biofuel every seconds.
+		icon:icons[10,12]
+		cost:3000000000000 koros, 5 prestigio
+		on tick:yield 10 Plasma
+		on tick:yield 10 tplas
+		on tick:yield 10 tplas2
+		on tick:yield 5 Biofuel
+		on tick:yield 5 tbio
+		on tick:yield 5 tbio2
+		on tick:yield 20 Ice
+		on tick:yield 20 tice
+		on tick:yield 20 tice2
+		req:3000000000000 tkor
+		tag: buildings2
 		
 		
 		
@@ -1575,14 +1636,14 @@ Upgrades
 *KinBuffer
 		name:Kinetic Impact Buffers
 		desc:Kinetic Impact Buffers absorbs and disperse force to protect cargo from sudden shocks.<//><b>Effect:</b><.>Stasis Crates production x4
-		cost:10000000 koros StasisCrates>=4
+		cost:10000000 koros
 		passive:multiply yield of StasisCrates by 4
-		req:10000000 tkor
+		req:10000000 tkor 
 		
 *SecMatrix
 		name:Secure Freight Matrix
 		desc:Locks cargo within an encrypted containment grid for maximum security.<//><b>Effect:</b><.>Plasma producion +40%<//><.>Ice producion +20%
-		cost:200000000 koros PlasmaGens>=2
+		cost:200000000 koros
 		passive:multiply yield of Plasma by 1.40
 		passive:multiply yield of tplas by 1.40
 		passive:multiply yield of tplas2 by 1.40
@@ -1594,9 +1655,18 @@ Upgrades
 *EmGrid
 		name:Emergency Force-Field Grid
 		desc:Uses rapid-deployment energy shields to safeguard critical cargo.<//><b>Effect:</b><.>Cryo-Containers production x20
-		cost:400000000 koros PlasmaGens>=2
+		cost:400000000 koros
 		passive:multiply yield of CryoCons by 20
 		req:500000000 tkor
+		
+	*Growth
+		name:Growth Accelerator
+		desc:A core upgrade that applies a percentage-based increase to all Koros-generating activities.<//><b>Effect:</b><.>Koros producion +10%
+		cost:2000000000 koros
+		passive:multiply yield of koros by 1.10
+		passive:multiply yield of tkor by 1.10
+		passive:multiply yield of tkor2 by 1.10
+		req:60000000000 tkor
 
 *SpecHUD
 		name:SpectraLink HUD
@@ -1618,6 +1688,43 @@ Upgrades
 		cost:90000000000 koros 
 		passive:multiply yield of ZeroGs by 3
 		req:100000000000 tkor
+		
+	*CryoFreezer
+		name:CryoPlasma Freezer
+		desc:Your Ice-Generators creates intense cold, converting vapor into solid ice with minimal energy consumption.<//><b>Effect:</b><.>Ice-Generators production x2
+		cost:40000000000 koros, 10000 Plasma
+		passive:multiply yield of IceGens by 2
+		req:400000000000 tkor
+		
+	*IonStorm
+		name:IonStorm Reactor
+		desc:Harnesses the power of ion storms to generate vast amounts of plasma with minimal energy input.<//><b>Effect:</b><.>Plasma-Generators production x2
+		cost:1200000000000 koros, 5000 Biofuel
+		passive:multiply yield of PlasmaGens by 2
+		req:800000000000 tkor
+
+  *GreenFusion
+		name:GreenFusion BioCore
+		desc:Combines biofuel synthesis with green energy fusion techniques to create a sustainable and powerful fuel source.<//><b>Effect:</b><.>Biofuel-Generators production x2
+		cost:4000000000000 koros, 20000 Ice, 15000 Plasma
+		passive:multiply yield of BiofuelGens by 2
+		req:2000000000000 tkor
+		
+	*CryoBioFusion
+		name:CryoBioFusion Array
+		desc:A comprehensive system that integrates biological fuel production, cryogenic cooling, and frost-based energy harvesting for optimized resource management.<//><b>Effect:</b><.>CryoFlare Reactor production x2<.>Frostbloom Engines production x2<.>BioSynth Cores production x2
+		cost:40000000000000 koros, 20 prestigio
+		passive:multiply yield of CryoFlares by 2
+		passive:multiply yield of FrostEngines by 2
+		passive:multiply yield of BioSynths by 2
+		req:10000000000000 tkor
+		
+	*XenoCorePrime
+		name:XenoCore Prime Reactor
+		desc:Integrates alien technology to create a fusion reactor that draws on exotic materials for extremely powerful and stable energy production.<//><b>Effect:</b><.>XenoSynth Reactor production x4
+		cost:80000000000000 koros, 60 prestigio
+		passive:multiply yield of XenoSynths by 4
+		req:20000000000000 tkor
 
 *AucHouse
 		name:Auction House
@@ -1646,10 +1753,10 @@ Upgrades
 
 *ResetPrestige
 		name:Gain Anomaly Fragments.
-		text:Sell all cargo and modules for <b><#ffffff>[tkor2*0.00000000001]</b></#> Anomaly Fragments<//><.>The amount is proporsional to total Koros earned.<//>(Previous runs included)
-		desc:Sell all cargo and modules for <b>[tkor2*0.01]</b> Anomaly Fragments.<//><b>Effect:</b><.>Gain Anomaly Fragments, proporsional to total Koros. -[tkor]-[tkor2]-
+		text:Sell all cargo and components for <b><#ffffff>[tkor2*0.00000000001]</b></#> Anomaly Fragments<//><.>The amount is proporsional to total Koros earned.<//>(Previous runs included)
+		desc:Sell all cargo and components for <b>[tkor2*0.01]</b> Anomaly Fragments.<//><b>Effect:</b><.>Gain Anomaly Fragments, proporsional to total Koros. -[tkor]-[tkor2]-
 		tag:prestige upgrades2
-		req:tkor>600000000000 and prestigio<1000000000000000000000000000000000000000000
+		req:tkor>600000000000 and tkor2<1000000000000000000000000000000000000000000
 		on earn:log <b>Cargo and modules sold.<//>
 		on earn:log <b>[tkor2*0.00000000001] Anomaly Fragments</b> earned.
 		on earn:
@@ -1663,7 +1770,7 @@ Upgrades
 		name:Gain Shadow Core
 		desc:Reset everything, <b>even your Anomaly Fragments</b>, gaining <b>1</b> Shadow Core.<//><b>Effect:</b><.>Complete the game and start from scratch with a Shadow Core.
 		tag:prestige upgrades2
-		req:1000000000000000000000000000000000000000000 prestigio
+		req:tkor>600000000000 and 1000000000000000000000000000000000000000000 tkor2
 		on earn:log <b>You gain a Shadow Core.
 		on earn:
 			lose notTag:prestige2
@@ -1677,17 +1784,205 @@ Upgrades
 Achievements
 	*TEMPLATE
 
-*Achiev1
-		name:Your First Achievement!
-		desc:Buy a Mining Drone.
+*korosAchiev2
+		name:Cosmic Merchant
+		desc:Have <b>1,000</b> Koros.
+		req:1000 koros
+		tag:prestige prestige2
+*korosAchiev3
+		name:Millionaire
+		desc:Have <b>1,000,000</b> Koros.
+		req:1000000 koros
+		tag:prestige prestige2
+*korosAchiev4
+		name:Billionaire
+		desc:Have <b>1,000,000,000</b> Koros.
+		req:1000000000 koros
+		tag:prestige prestige2
+*korosAchiev5
+		name:Trillionaire
+		desc:Have <b>1,000,000,000,000</b> Koros.
+		req:1000000000000 koros
+		tag:prestige prestige2
+
+
+
+*korosPsAchiev1
+		name:Koros Collector
+		desc:Produce <b>10</b> Koros per second.
+		req:10 koros per second
+		tag:prestige prestige2
+
+*korosPsAchiev2
+		name:Steady Stream
+		desc:Produce <b>100</b> Koros per second.
+		req:100 koros per second
+		tag:prestige prestige2
+		
+	*korosPsAchiev3
+		name:Profit Pioneer
+		desc:Produce <b>1,000</b> Koros per second.
+		req:1000 koros per second
+		tag:prestige prestige2
+		
+	*korosPsAchiev4
+		name:The Koro Machine
+		desc:Produce <b>10,000</b> Koros per second.
+		req:10000 koros per second
+		tag:prestige prestige2
+		
+	*korosPsAchiev5
+		name:Infinite Loop
+		desc:Produce <b>100,000</b> Koros per second.
+		req:100000 koros per second
+		tag:prestige prestige2
+		
+	*korosPsAchiev6
+		name:Hyper-Economy
+		desc:Produce <b>1,000,000</b> Koros per second.
+		req:1000000 koros per second
+		tag:prestige prestige2
+		
+	*korosPsAchiev7
+		name:Koro Overload
+		desc:Produce <b>1,000,000,000</b> Koros per second.
+		req:1000 koros per second
+		tag:prestige prestige2
+		
+	*Achiev1
+		name:The Start of the Journey
+		desc:Buy a Cargo Rack.
 		req:(CargoRacks>=1)
 		tag:prestige prestige2
 
 *Achiev2
-		name:Your Second Achievement!
-		desc:Have 2 Mining Drones.
-		req:(CargoRacks>=2)
+		name:Cargo Cadet
+		desc:Have <b>10</b> Automated Loaders.
+		req:(autoLoaders>=10)
 		tag:prestige prestige2
+		
+	*Achiev3
+		name:Packed and Ready
+		desc:Have <b>15</b> Retractable Loading Arms.
+		req:(RetArms>=15)
+		tag:prestige prestige2
+		
+	*Achiev4
+		name:Deep Freeze
+		desc:Have <b>20</b> Genetic Cryo Storages.
+		req:(GenCryos>=20)
+		tag:prestige prestige2
+		
+	*Achiev5
+		name:Vault of the Void
+		desc:Have <b>25</b> Cryo-Containers.
+		req:(CryoCons>=25)
+		tag:prestige prestige2
+		
+	*Achiev6
+		name:Smooth Operator
+		desc:Have <b>30</b> Stasis Crates.
+		req:(StasisCrates>=30)
+		tag:prestige prestige2
+		
+	*Achiev7
+		name:Chilled to Perfection
+		desc:Have <b>40</b> Plasma-Cooled Storages.
+		req:(PlasmaCools>=40)
+		tag:prestige prestige2
+	
+	*Achiev8
+		name:Hyper-Compression Expert
+		desc:Have <b>45</b> Hyper-Compression Crates.
+		req:(HyperCrates>=45)
+		tag:prestige prestige2
+		
+	*Achiev9
+		name:Master of the Hold
+		desc:Have <b>50</b> Holo-Interface Modules.
+		req:(HoloMods>=50)
+		tag:prestige prestige2
+		
+				
+	*Achiev10
+		name:Gravity Tamer
+		desc:Have <b>55</b> Zero-G Storages.
+		req:(ZeroGs>=55)
+		tag:prestige prestige2
+		
+	*Achiev11
+		name:Quantum Packer
+		desc:Have <b>60</b> Quantum Computing Nodes.
+		req:(QNodes>=60)
+		tag:prestige prestige2
+		
+	*Achiev12
+		name:Xeno Trader
+		desc:Have <b>65</b> Xenotech Seals.
+		req:(XenoSeals>=65)
+		tag:prestige prestige2
+		
+	*Achiev13
+		name:Dimensional Hoarder
+		desc:Have <b>70</b> Matter Phase Lockers.
+		req:(MatterPhases>=70)
+		tag:prestige prestige2
+		
+	*afAchiev
+		name:Echoes of the Unknown
+		desc:Gain Anomaly Fragments.<//>
+		req:1 prestigio
+		tag:prestige prestige2
+
+	*afAchiev2
+		name:Cosmic Salvager
+		desc:Have <b>100 Anomaly Fragments</b>.<//>
+		req:100 prestigio
+		tag:prestige prestige2
+
+	*afAchiev3
+		name:Beyond the Veil
+		desc:Have <b>1,000 Anomaly Fragments</b>.<//>
+		req:1000 prestigio
+		tag:prestige prestige2
+
+	*afAchiev4
+		name:Rift Explorer
+		desc:Have <b>10,000 Anomaly Fragments</b>.<//>
+		req:10000 prestigio
+		tag:prestige prestige2
+
+	*afAchiev5
+		name:Shattered Reality
+		desc:Have <b>100,000 Anomaly Fragments</b>.<//>
+		req:100000 prestigio
+		tag:prestige prestige2
+
+	*afAchiev6
+		name:Singularity Trader
+		desc:Have <b>1,000,000 Anomaly Fragments</b>.<//>
+		req:1000000 prestigio
+		tag:prestige prestige2
+	
+	*afAchiev7
+		name:Tear in the Fabric
+		desc:Have <b>1,000,000,000 Anomaly Fragments</b>.<//>
+		req:1000000000 prestigio
+		tag:prestige prestige2
+	
+	*afAchiev8
+		name:The Last Fragment
+		desc:Have <b>1,000,000,000,000 Anomaly Fragments</b>.<//>
+		req:1000000000000 prestigio
+		tag:prestige prestige2
+		
+	*scAchiev1
+		name:Dark Ascendant
+		desc:Have a <b>Shadow Core</b>.
+		req:1 prestigio2
+		tag:prestige prestige2
+		
+
 
 CSS
   
