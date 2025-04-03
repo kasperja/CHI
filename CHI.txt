@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.77
+	version:0.78
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -72,8 +72,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.77</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.77</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.78</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.78</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -1014,9 +1014,23 @@ Buildings
 		req:50000000000 tkor
 		tag: buildings2
 		
+	*PlasmaHarv|PlasmaHarvs
+		name:PlasmaHarvest-Extractor
+		desc:Extracts plasma from energy fields and biofuel from biological materials.<//><b>Effect:</b><.>Produces 1 Plasma every 5 seconds. <.>Produces 1 Biofuel every 5 seconds.
+		icon:icons[10,12]
+		cost:700000000000 koros
+		on tick:yield 0.2 Plasma
+		on tick:yield 0.2 tplas
+		on tick:yield 0.2 tplas2
+		on tick:yield 0.2 Biofuel
+		on tick:yield 0.2 tbio
+		on tick:yield 0.2 tbio2
+		req:700000000000 tkor
+		tag: buildings2
+		
 	*BioSynth|BioSynths
 		name:BioSynth Core
-		desc:Produces biofuel and plasma through temperature and energy manipulation.<//><b>Effect:</b><.>Produces 1 Plasma every 2 seconds. <.>Produces 1 Biofuel every 2 seconds.
+		desc:Produces biofuel, plasma, and ice through temperature and energy manipulation.<//><b>Effect:</b><.>Produces 1 Ice every 2 seconds. <.>Produces 1 Plasma every 2 seconds. <.>Produces 1 Biofuel every 2 seconds.
 		icon:icons[10,12]
 		cost:1000000000000 koros
 		on tick:yield 0.5 Plasma
@@ -1025,6 +1039,9 @@ Buildings
 		on tick:yield 0.5 Biofuel
 		on tick:yield 0.5 tbio
 		on tick:yield 0.5 tbio2
+		on tick:yield 0.5 Ice
+		on tick:yield 0.5 tice
+		on tick:yield 0.5 tice2
 		req:1000000000000 tkor
 		tag: buildings2
 		
