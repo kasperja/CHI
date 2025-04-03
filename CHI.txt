@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.78
+	version:0.79
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -72,8 +72,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.78</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.78</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.79</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.79</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -1666,7 +1666,7 @@ Upgrades
 		passive:multiply yield of tice2 by 1.20
 		req:120000000 tkor
 
-*EmGrid
+  *EmGrid
 		name:Emergency Force-Field Grid
 		desc:Uses rapid-deployment energy shields to safeguard critical cargo.<//><b>Effect:</b><.>Cryo-Containers production x20
 		cost:400000000 koros
@@ -1726,11 +1726,11 @@ Upgrades
 		
 	*CryoBioFusion
 		name:CryoBioFusion Array
-		desc:A comprehensive system that integrates biological fuel production, cryogenic cooling, and frost-based energy harvesting for optimized resource management.<//><b>Effect:</b><.>CryoFlare Reactor production x2<.>Frostbloom Engines production x2<.>BioSynth Cores production x2
+		desc:A comprehensive system that integrates biological fuel production, cryogenic cooling, and frost-based energy harvesting for optimized resource management.<//><b>Effect:</b><.>CryoFlare Reactor production x2<.>Frostbloom Engines production x2<.>PlasmaHarvest-Extractor production x2
 		cost:40000000000000 koros, 20 prestigio
 		passive:multiply yield of CryoFlares by 2
 		passive:multiply yield of FrostEngines by 2
-		passive:multiply yield of BioSynths by 2
+		passive:multiply yield of PlasmaHarvs by 2
 		req:10000000000000 tkor
 		
 	*XenoCorePrime
