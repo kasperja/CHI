@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.7
+	version:0.75
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -72,8 +72,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.7</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.7</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.75</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.75</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -933,22 +933,22 @@ Buildings
 		
 	*XenoSeal|XenoSeals
 		name:Xenotech Seals
-		desc:Creates impenetrable barriers using unknown extraterrestrial technology.<//><b>Effect:</b><.>Produces 40,000,000 Koros every second.
+		desc:Creates impenetrable barriers using unknown extraterrestrial technology.<//><b>Effect:</b><.>Produces 80,000,000 Koros every second.
 		icon:icons[10,12]
 		cost:16000000000 koros, 8000 Plasma, 10 prestigio
-		on tick:yield 40000000 koros
-		on tick:yield 40000000 tkor
-		on tick:yield 40000000 tkor2
+		on tick:yield 80000000 koros
+		on tick:yield 80000000 tkor
+		on tick:yield 80000000 tkor2
 		req:600000000000 tkor
 		
 	*MatterPhase|MatterPhases
 		name:Matter Phase Lockers
-		desc:Shifts cargo between dimensions for ultimate security and storage efficiency.<//><b>Effect:</b><.>Produces 300,000,000 Koros every second.
+		desc:Shifts cargo between dimensions for ultimate security and storage efficiency.<//><b>Effect:</b><.>Produces 600,000,000 Koros every second.
 		icon:icons[10,12]
 		cost:40000000000 koros,  10000 Biofuel, 50 prestigio
-		on tick:yield 300000000 koros
-		on tick:yield 300000000 tkor
-		on tick:yield 300000000 tkor2
+		on tick:yield 600000000 koros
+		on tick:yield 600000000 tkor
+		on tick:yield 600000000 tkor2
 		req:1000000000000 tkor
 
 //Buildings2 / Generators
