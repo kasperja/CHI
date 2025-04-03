@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.75
+	version:0.76
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -72,8 +72,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.75</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.75</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.76</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.76</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -1016,7 +1016,7 @@ Buildings
 		
 	*BioSynth|BioSynths
 		name:BioSynth Core
-		desc:Produces biofuel, plasma, and ice through temperature and energy manipulation.<//><b>Effect:</b><.>Produces 1 Ice every 2 seconds. <.>Produces 1 Plasma every 2 seconds. <.>Produces 1 Biofuel every 2 seconds.
+		desc:Produces biofuel, plasma, and ice through temperature and energy manipulation.<//><b>Effect:</b><.>Produces 1 Plasma every 2 seconds. <.>Produces 1 Biofuel every 2 seconds.
 		icon:icons[10,12]
 		cost:1000000000000 koros
 		on tick:yield 0.5 Plasma
@@ -1025,9 +1025,6 @@ Buildings
 		on tick:yield 0.5 Biofuel
 		on tick:yield 0.5 tbio
 		on tick:yield 0.5 tbio2
-		on tick:yield 0.5 Ice
-		on tick:yield 0.5 tice
-		on tick:yield 0.5 tice2
 		req:1000000000000 tkor
 		tag: buildings2
 		
