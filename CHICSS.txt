@@ -470,12 +470,14 @@ visibility: hidden;
 }
 .achiev:hover{
 margin-right: -1px;
+margin-top: -0.8px;
 border: 1px solid #ffc000;
 color: #00110e;
 background: #ffc000;
 
 }.achiev{
 margin-right: -1px;
+margin-top: -0.8px;
 border: 1px solid #ffc000;
 color: #ffc000;
 background: #00110e;
