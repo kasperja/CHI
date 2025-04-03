@@ -1782,7 +1782,7 @@ Upgrades
 
 *ResetPrestige2
 		name:Gain Shadow Core
-		text:Reset everything, even your Anomaly Fragments, gaining <b><#ffffff>1</b></#> Shadow Core.
+		text:Reset everything, even your Anomaly Fragments, gaining <b><#ffffff>1</b></#> Shadow Core.<.>Complete the game.
 		desc:Reset everything, even your Anomaly Fragments, gaining <b><#ffffff>1</b></#> Shadow Core.<//><b>Effect:</b><.>Complete the game and start from scratch with a Shadow Core.
 		tag:prestige upgrades2
 		req:tkor>600000000000 and tkor2>=1000000000000000000000000000000000000000000
