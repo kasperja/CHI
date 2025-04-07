@@ -4,14 +4,14 @@ Let's make a game!
 	desc:Upgrade and manage the cargo hold of a spaceship, while trading goods.
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.82
+	version:0.83
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
 	building cost increase:110%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, https://raw.githubusercontent.com/kasperja/CHI/main/BlankSpritesheet.png
-	stylesheet:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/CHICSS.txt
+	stylesheet:https://cargoholdidle.neocities.org/CHICSS-NC
 	no particles
 	no bulk particles
 
@@ -74,8 +74,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.82</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.82</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.83</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.83</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -982,7 +982,7 @@ Buildings
 		name:Biofuel-Generators
 		desc:Biofuel is a synthesized energy source made from organic compounds.<//><b>Effect:</b><.>Produces 1 Biofuel every 10 seconds.
 		icon:icons[10,12]
-		cost:3000000000 koros
+		cost:300000000 koros
 		on tick:yield 0.1 Biofuel
 		on tick:yield 0.1 tbio
 		on tick:yield 0.1 tbio2
