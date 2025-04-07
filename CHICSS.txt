@@ -56,7 +56,7 @@
 }
 
 #box-resPa{
-idth:100% !important;
+width:100% !important;
 justify-content: center;
 	height:5% !important;
 
@@ -83,7 +83,7 @@ justify-content: space-evenly;
 	
 }.tag-restop{
 float:left !important;
-	width: 42%;
+	width: 40em;
 text-align: start !important;
 left: 7.5vw;
 }
