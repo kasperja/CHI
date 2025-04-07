@@ -986,7 +986,7 @@ Buildings
 		on tick:yield 0.1 Biofuel
 		on tick:yield 0.1 tbio
 		on tick:yield 0.1 tbio2
-		req:300000000 tkor
+		req:2000000000 tkor
 		tag: buildings2
 		
 	*CryoFlare|CryoFlares
