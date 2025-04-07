@@ -1,2011 +1,589 @@
-Let's make a game!
-	name:CargoHold Idle
-	by:Kasperja
-	desc:Write the game description here.<//>Click to play the game!
-	created:18/03/2025
-	updated:18/03/2025
-	version:0.81
+#game
+  {
+    background:#00110e;
+	background-size: cover;
+	font-family: DejaVu Sans Mono, monospace;
+	letter-spacing: 1px;
+	font-stretch: ultra-expanded
+    color:#ffc000;
+  }
 
-Settings
-	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
-	building cost increase:110%
-	building cost refund:50%
-	spritesheet:icons, 48 by 48, https://raw.githubusercontent.com/kasperja/CHI/main/BlankSpritesheet.png
-	stylesheet:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/CHICSS.txt
-	no particles
-	no bulk particles
 
-Layout
+.box
+{
+	text-align:left;
+	padding: 0px;
+	box-shadow:none;
+}
+#box-res.fullWidth
+{
+	text-align:center;
+	width:100%;
+	top:0%;
+	height:5%;
+	min-height:32px;
+	z-index:100;
+	position:absolute;
+	color:#ffc000 !important;
+}
+.box-header,.box-footer,.box-bit
+{
+	background:#ffc000;
+	color:#00110e;
 	
-*main
-    contains:buttons, log, logHeader
-*res
-	  icons:show
-    contains:Resources
-    class:fullWidth
-*buttons
-    contains:Buttons
-	  tooltip origin:left
-*store
-    contains:buildings, upgrades, buildingsHeader, upgradesHeader, buildings2, upgrades2, buildings2Header, upgrades2Header
-*buildings
-	  icons:hide
-    contains:Buildings
-    tooltip origin:right
-*buildingsHeader
-	  header:Modules
-*buildings2
-	  icons:hide
-    contains:tag:buildings2
-    tooltip origin:left
-*buildings2Header
-	  header:Generators
-*upgrades
-	  tooltip origin:left
-    contains:Upgrades
-    costs:show
-    names:show
-	  icons:hide
-*upgradesHeader
-	  header:Upgrades
-*upgrades2
-	  no tooltip
-    contains:tag:upgrades2
-    costs:show
-    names:show
-	  icons:hide
-*upgrades2Header
-	  header:Command Console
-*log
-	  contains:Log
-	  class:log
-*logHeader
-	  header:Comms
-
-
-		
-Buttons
-	*koroButton
-		name:Trade
-		desc:Trade to earn Koros.
-		on click:anim icon wobble
-		on click:yield 1 koro
-		on click:yield 1 tkor
-		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.81</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.81</#>
-		on load:log Game loaded.
-		on start:lose BuyIce1
-		on load:lose BuyIce1
-		on start:timeB1=random(10,110)
-		on load:timeB1=random(10,110)
-		on start:lose BuyIce2
-		on load:lose BuyIce2
-		on start:timeB2=random(10,110)
-		on load:timeB2=random(10,110)
-		on start:lose BuyIce3
-		on load:lose BuyIce3
-		on start:timeB3=random(10,110)
-		on load:timeB3=random(10,110)
-		on start:lose SellIce4
-		on load:lose SellIce4
-		on start:timeB4=random(10,110)
-		on load:timeB4=random(10,110)
-		on start:lose SellIce5
-		on load:lose SellIce5
-		on start:timeB5=random(10,110)
-		on load:timeB5=random(10,110)
-		on start:lose SellIce6
-		on load:lose SellIce6
-		on start:timeB6=random(10,110)
-		on load:timeB6=random(10,110)
-		on tick:
-			if (timeB1>120)
-				lose BuyIce1
-				timeChk=1
-				ice1=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeB2>120)
-				lose BuyIce2
-				timeChk2=1
-				ice2=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeB3>120)
-				lose BuyIce3
-				timeChk3=1
-				ice3=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeB4>120)
-				lose SellIce4
-				timeChk4=1
-				ice4=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeB5>120)
-				lose SellIce5
-				timeChk5=1
-				ice5=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeB6>120)
-				lose SellIce6
-				timeChk6=1
-				ice6=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on start:lose BuyPlasma1
-		on load:lose BuyPlasma1
-		on start:timePL1=random(10,110)
-		on load:timePL1=random(10,110)
-		on start:lose BuyPlasma2
-		on load:lose BuyPlasma2
-		on start:timePL2=random(10,110)
-		on load:timePL2=random(10,110)
-		on start:lose BuyPlasma3
-		on load:lose BuyPlasma3
-		on start:timePL3=random(10,110)
-		on load:timePL3=random(10,110)
-		on start:lose SellPlasma4
-		on load:lose SellPlasma4
-		on start:timePL4=random(10,110)
-		on load:timePL4=random(10,110)
-		on start:lose SellPlasma5
-		on load:lose SellPlasma5
-		on start:timePL5=random(10,110)
-		on load:timePL5=random(10,110)
-		on start:lose SellPlasma6
-		on load:lose SellPlasma6
-		on start:timePL6=random(10,110)
-		on load:timePL6=random(10,110)
-		on tick:
-			if (timePL1>120)
-				lose BuyPlasma1
-				timeChkPL=1
-				plasma1=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timePL2>120)
-				lose BuyPlasma2
-				timeChkPL2=1
-				plasma2=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timePL3>120)
-				lose BuyPlasma3
-				timeChkPL3=1
-				plasma3=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timePL4>120)
-				lose SellPlasma4
-				timeChkPL4=1
-				plasma4=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timePL5>120)
-				lose SellPlasma5
-				timeChkPL5=1
-				plasma5=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timePL6>120)
-				lose SellPlasma6
-				timeChkPL6=1
-				plasma6=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on start:lose BuyBiofuel1
-		on load:lose BuyBiofuel1
-		on start:timeBIO1=random(10,110)
-		on load:timeBIO1=random(10,110)
-		on start:lose BuyBiofuel2
-		on load:lose BuyBiofuel2
-		on start:timeBIO2=random(10,110)
-		on load:timeBIO2=random(10,110)
-		on start:lose BuyBiofuel3
-		on load:lose BuyBiofuel3
-		on start:timeBIO3=random(10,110)
-		on load:timeBIO3=random(10,110)
-		on start:lose SellBiofuel4
-		on load:lose SellBiofuel4
-		on start:timeBIO4=random(10,110)
-		on load:timeBIO4=random(10,110)
-		on start:lose SellBiofuel5
-		on load:lose SellBiofuel5
-		on start:timeBIO5=random(10,110)
-		on load:timeBIO5=random(10,110)
-		on start:lose SellBiofuel6
-		on load:lose SellBiofuel6
-		on start:timeBIO6=random(10,110)
-		on load:timeBIO6=random(10,110)
-		on tick:
-			if (timeBIO1>120)
-				lose BuyBiofuel1
-				timeChkBIO=1
-				biofuel1=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeBIO2>120)
-				lose BuyBiofuel2
-				timeChkBIO2=1
-				biofuel2=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeBIO3>120)
-				lose BuyBiofuel3
-				timeChkBIO3=1
-				biofuel3=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeBIO4>120)
-				lose SellBiofuel4
-				timeChkBIO4=1
-				biofuel4=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeBIO5>120)
-				lose SellBiofuel5
-				timeChkBIO5=1
-				biofuel5=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		on tick:
-			if (timeBIO6>120)
-				lose SellBiofuel6
-				timeChkBIO6=1
-				biofuel6=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
-			end
-		end
-		icon:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/TradeButton4.jpg
-		no text
-		class:bigButton
-		icon class:shadowed
-		tooltip origin:bottom
-		tooltip class:red
-		
-Resources
-	*koro|koros
-		name:Koros|Koros
-		desc:This is your Koros, click and upgrade to earn Koros.
-		class:noBackground
-		show earned
-    tag:restop
-    
-	*Ice
-		hidden
-		
-
-	*tice
-		hidden
-
-	*tice2
-		hidden
-		tag:prestige
-
-	*tkor
-		hidden
-
-	*tkor2
-		hidden
-		tag:prestige
-		
-  *Plasma
-		hidden
-		
-
-	*tplas
-		hidden
-
-	*tplas2
-		hidden
-		tag:prestige
-		
-	*Biofuel
-		hidden
-		
-
-	*tbio
-		hidden
-
-	*tbio2
-		hidden
-		tag:prestige
-
-	*prestigio
-		name:Anomaly Fragment|Anomaly Fragments
-		desc:Unstable remnants of spacetime distortions with unpredictable effects.
-		class:noBackground
-		show earned
-		hidden when 0
-		tag:prestige restop
-
-	*prestigio2
-		name:Shadow Core|Shadow Cores
-		desc:A swirling mass of pure darkness that absorbs all light and energy.
-		class:noBackground
-		show earned
-		hidden when 0
-		tag:prestige prestige2 restop
-		
-	*ice1
-		hidden
-	
-	*koros1
-		hidden
-
-	*timeB1
-		hidden
-		passive:yield 1 timeB1
-		on tick: 
-			if (timeB1>160)
-				timeB1 is 0
-				timeChk=0
-			end
-		end
-		on tick:
-			if (timeB1>120)
-				lose BuyIce1
-				timeChk=1
-			end
-		end
-	
-	*timeChk
-		hidden
-
-	*ice2
-		hidden
-	
-	*koros2
-		hidden
-
-	*timeB2
-		hidden
-		passive:yield 1 timeB2
-		on tick: 
-			if (timeB2>160)
-				timeB2 is 0
-				timeChk2=0
-			end
-		end
-		on tick:
-			if (timeB2>120)
-				lose BuyIce2
-				timeChk2=1
-			end
-		end
-	
-	*timeChk2
-		hidden
-
-	*ice3
-		hidden
-	
-	*koros3
-		hidden
-
-	*timeB3
-		hidden
-		passive:yield 1 timeB3
-		on tick: 
-			if (timeB3>160)
-				timeB3 is 0
-				timeChk3=0
-			end
-		end
-		on tick:
-			if (timeB3>120)
-				lose BuyIce3
-				timeChk3=1
-			end
-		end
-	
-	*timeChk3
-		hidden
-		
-	*ice4
-		hidden
-	
-	*koros4
-		hidden
-
-	*timeB4
-		hidden
-		passive:yield 1 timeB4
-		on tick: 
-			if (timeB4>160)
-				timeB4 is 0
-				timeChk4=0
-			end
-		end
-		on tick:
-			if (timeB4>120)
-				lose SellIce4
-				timeChk4=1
-			end
-		end
-	
-	*timeChk4
-		hidden
-		
-	*ice5
-		hidden
-	
-	*koros5
-		hidden
-
-	*timeB5
-		hidden
-		passive:yield 1 timeB5
-		on tick: 
-			if (timeB5>160)
-				timeB5 is 0
-				timeChk5=0
-			end
-		end
-		on tick:
-			if (timeB5>120)
-				lose SellIce5
-				timeChk5=1
-			end
-		end
-	
-	*timeChk5
-		hidden
-		
-	*ice6
-		hidden
-	
-	*koros6
-		hidden
-
-	*timeB6
-		hidden
-		passive:yield 1 timeB6
-		on tick: 
-			if (timeB6>160)
-				timeB6 is 0
-				timeChk6=0
-			end
-		end
-		on tick:
-			if (timeB6>120)
-				lose SellIce6
-				timeChk6=1
-			end
-		end
-	
-	*timeChk6
-		hidden
-
-  *plasma1
-		hidden
-	
-	*korosPL1
-		hidden
-
-	*timePL1
-		hidden
-		passive:yield 1 timePL1
-		on tick: 
-			if (timePL1>160)
-				timePL1 is 0
-				timeChkPL=0
-			end
-		end
-		on tick:
-			if (timePL1>120)
-				lose BuyIce1
-				timeChkPL=1
-			end
-		end
-	
-	*timeChkPL
-		hidden
-
-	*plasma2
-		hidden
-	
-	*korosPL2
-		hidden
-
-	*timePL2
-		hidden
-		passive:yield 1 timePL2
-		on tick: 
-			if (timePL2>160)
-				timePL2 is 0
-				timeChkPL2=0
-			end
-		end
-		on tick:
-			if (timePL2>120)
-				lose BuyIce2
-				timeChkPL2=1
-			end
-		end
-	
-	*timeChkPL2
-		hidden
-
-	*plasma3
-		hidden
-	
-	*korosPL3
-		hidden
-
-	*timePL3
-		hidden
-		passive:yield 1 timePL3
-		on tick: 
-			if (timePL3>160)
-				timePL3 is 0
-				timeChkPL3=0
-			end
-		end
-		on tick:
-			if (timePL3>120)
-				lose BuyIce3
-				timeChkPL3=1
-			end
-		end
-	
-	*timeChkPL3
-		hidden
-		
-	*plasma4
-		hidden
-	
-	*korosPL4
-		hidden
-
-	*timePL4
-		hidden
-		passive:yield 1 timePL4
-		on tick: 
-			if (timePL4>160)
-				timePL4 is 0
-				timeChkPL4=0
-			end
-		end
-		on tick:
-			if (timePL4>120)
-				lose SellIce4
-				timeChkPL4=1
-			end
-		end
-	
-	*timeChkPL4
-		hidden
-		
-	*plasma5
-		hidden
-	
-	*korosPL5
-		hidden
-
-	*timePL5
-		hidden
-		passive:yield 1 timePL5
-		on tick: 
-			if (timePL5>160)
-				timePL5 is 0
-				timeChkPL5=0
-			end
-		end
-		on tick:
-			if (timePL5>120)
-				lose SellIce5
-				timeChkPL5=1
-			end
-		end
-	
-	*timeChkPL5
-		hidden
-		
-	*plasma6
-		hidden
-	
-	*korosPL6
-		hidden
-
-	*timePL6
-		hidden
-		passive:yield 1 timePL6
-		on tick: 
-			if (timePL6>160)
-				timePL6 is 0
-				timeChkPL6=0
-			end
-		end
-		on tick:
-			if (timePL6>120)
-				lose SellIce6
-				timeChkPL6=1
-			end
-		end
-	
-	*timeChkPL6
-		hidden
-
-*biofuel1
-		hidden
-	
-	*korosBIO1
-		hidden
-
-	*timeBIO1
-		hidden
-		passive:yield 1 timeBIO1
-		on tick: 
-			if (timeBIO1>160)
-				timeBIO1 is 0
-				timeChkBIO=0
-			end
-		end
-		on tick:
-			if (timeBIO1>120)
-				lose BuyBiofuel1
-				timeChkBIO=1
-			end
-		end
-	
-	*timeChkBIO
-		hidden
-
-	*biofuel2
-		hidden
-	
-	*korosBIO2
-		hidden
-
-	*timeBIO2
-		hidden
-		passive:yield 1 timeBIO2
-		on tick: 
-			if (timeBIO2>160)
-				timeBIO2 is 0
-				timeChkBIO2=0
-			end
-		end
-		on tick:
-			if (timeBIO2>120)
-				lose BuyBiofuel2
-				timeChkBIO2=1
-			end
-		end
-	
-	*timeChkBIO2
-		hidden
-
-	*biofuel3
-		hidden
-	
-	*korosBIO3
-		hidden
-
-	*timeBIO3
-		hidden
-		passive:yield 1 timeBIO3
-		on tick: 
-			if (timeBIO3>160)
-				timeBIO3 is 0
-				timeChkBIO3=0
-			end
-		end
-		on tick:
-			if (timeBIO3>120)
-				lose BuyBiofuel3
-				timeChkBIO3=1
-			end
-		end
-	
-	*timeChkBIO3
-		hidden
-		
-	*biofuel4
-		hidden
-	
-	*korosBIO4
-		hidden
-
-	*timeBIO4
-		hidden
-		passive:yield 1 timeBIO4
-		on tick: 
-			if (timeBIO4>160)
-				timeBIO4 is 0
-				timeChkBIO4=0
-			end
-		end
-		on tick:
-			if (timeBIO4>120)
-				lose SellBiofuel4
-				timeChkBIO4=1
-			end
-		end
-	
-	*timeChkBIO4
-		hidden
-		
-	*biofuel5
-		hidden
-	
-	*korosBIO5
-		hidden
-
-	*timeBIO5
-		hidden
-		passive:yield 1 timeBIO5
-		on tick: 
-			if (timeBIO5>160)
-				timeBIO5 is 0
-				timeChkBIO5=0
-			end
-		end
-		on tick:
-			if (timeBIO5>120)
-				lose SellBiofuel5
-				timeChkBIO5=1
-			end
-		end
-	
-	*timeChkBIO5
-		hidden
-		
-	*biofuel6
-		hidden
-	
-	*korosBIO6
-		hidden
-
-	*timeBIO6
-		hidden
-		passive:yield 1 timeBIO6
-		on tick: 
-			if (timeBIO6>160)
-				timeBIO6 is 0
-				timeChkBIO6=0
-			end
-		end
-		on tick:
-			if (timeBIO6>120)
-				lose SellBiofuel6
-				timeChkBIO6=1
-			end
-		end
-	
-	*timeChkBIO6
-		hidden
-
-
-
-
-Shinies
-	
-
-Buildings
-	
-	*TEMPLATE
-			
-	*CargoRack|CargoRacks
-		name:Cargo Racks
-		desc:Cargo Racks are storage frameworks designed to secure and organize freight in transport vessels.<//><b>Effect:</b><.>Produces 1 Koros every 10 seconds.
-		icon:icons[10,12]
-		cost:30 koros
-		on tick:yield 0.1 koros
-		on tick:yield 0.1 tkor
-		on tick:yield 0.1 tkor2
-		req:20 tkor
-
-	*autoLoader|autoLoaders
-		name:Automated Loaders
-		desc:Automated loaders efficiently move cargo with minimal human intervention.<//><b>Effect:</b><.>Produces 1 Koro every second.
-		icon:icons[10,12]
-		cost:200 koros
-		on tick:yield 1 koros
-		on tick:yield 1 tkor
-		on tick:yield 1 tkor2
-		req:400 tkor
-
-*RetArm|RetArms
-		name:Retractable Loading Arms
-		desc:Retractable loading arms extend and retract for quick, efficient cargo transfer in tight spaces.<//><b>Effect:</b><.>Produces 30 Koros every second.
-		icon:icons[10,12]
-		cost:50000 koros
-		on tick:yield 30 koros
-		on tick:yield 30 tkor
-		on tick:yield 30 tkor2
-		req:50000 tkor
-
-	*GenCryo|GenCryos
-		name:Genetic Cryo Storages
-		desc:Stores encoded life, frozen deep.<//><b>Effect:</b><.>Produces 200 Koros every second.
-		icon:icons[10,12]
-		cost:400000 koros, 200 Ice
-		on tick:yield 200 koros
-		on tick:yield 200 tkor
-		on tick:yield 200 tkor2
-		req:400000 tkor, 1 tice
-		
-	*CryoCon|CryoCons
-		name:Cryo-Containers
-		desc:Preserve cargo at ultra-low temperatures for extended periods.<//><b>Effect:</b><.>Produces 1,000 Koros every second.
-		icon:icons[10,12]
-		cost:900000 koros, 700 Ice
-		on tick:yield 1000 koros
-		on tick:yield 1000 tkor
-		on tick:yield 1000 tkor2
-		req:900000 tkor, 700 tice
-		
-	*StasisCrate|StasisCrates
-		name:Stasis Crates
-		desc:Prevents decay and degradation by halting molecular activity.<//><b>Effect:</b><.>Produces 3,000 Koros every second.
-		icon:icons[10,12]
-		cost:2000000 koros
-		on tick:yield 3000 koros
-		on tick:yield 3000 tkor
-		on tick:yield 3000 tkor2
-		req:2000000 tkor
-		
-	*PlasmaCool|PlasmaCools
-		name:Plasma-Cooled Storages
-		desc:Uses advanced cooling fields to preserve volatile or perishable cargo.<//><b>Effect:</b><.>Produces 20,000 Koros every second.
-		icon:icons[10,12]
-		cost:400 Plasma, 1000 Ice, 20000000 koros
-		on tick:yield 20000 koros
-		on tick:yield 20000 tkor
-		on tick:yield 20000 tkor2
-		req:20000000 tkor
-		
-	*HyperCrate|HyperCrates
-		name:Hyper-Compression Crates
-		desc:Condenses cargo to a fraction of its size for efficient storage.<//><b>Effect:</b><.>Produces 70,000 Koros every second.
-		icon:icons[10,12]
-		cost:1000 Plasma, 400000000 koros
-		on tick:yield 70000 koros
-		on tick:yield 70000 tkor
-		on tick:yield 70000 tkor2
-		req:400000000 tkor
-		
-	*HoloMod|HoloMods
-		name:Holo-Interface Modules
-		desc:Projects interactive 3D displays for seamless cargo management.<//><b>Effect:</b><.>Produces 440,000 Koros every second.
-		icon:icons[10,12]
-		cost:1800000000 koros
-		on tick:yield 440000 koros
-		on tick:yield 440000 tkor
-		on tick:yield 440000 tkor2
-		req:4800000000 tkor
-		
-	*ZeroG|ZeroGs
-		name:Zero-G Storages
-		desc:Eliminates gravitational stress, keeping delicate items secure.<//><b>Effect:</b><.>Produces 2,000,000 Koros every second.
-		icon:icons[10,12]
-		cost:3000000000 koros, 100 Biofuel
-		on tick:yield 2000000 koros
-		on tick:yield 2000000 tkor
-		on tick:yield 2000000 tkor2
-		req:35000000000 tkor
-		
-	*QNode|QNodes
-		name:Quantum Computing Nodes
-		desc:Process complex calculations at superluminal speeds using quantum states.<//><b>Effect:</b><.>Produces 8,000,000 Koros every second.
-		icon:icons[10,12]
-		cost:8000000000 koros, 5000 Ice, 1000 Biofuel
-		on tick:yield 8000000 koros
-		on tick:yield 8000000 tkor
-		on tick:yield 8000000 tkor2
-		req:10000000000 tkor
-		
-	*XenoSeal|XenoSeals
-		name:Xenotech Seals
-		desc:Creates impenetrable barriers using unknown extraterrestrial technology.<//><b>Effect:</b><.>Produces 80,000,000 Koros every second.
-		icon:icons[10,12]
-		cost:16000000000 koros, 8000 Plasma, 10 prestigio
-		on tick:yield 80000000 koros
-		on tick:yield 80000000 tkor
-		on tick:yield 80000000 tkor2
-		req:600000000000 tkor
-		
-	*MatterPhase|MatterPhases
-		name:Matter Phase Lockers
-		desc:Shifts cargo between dimensions for ultimate security and storage efficiency.<//><b>Effect:</b><.>Produces 600,000,000 Koros every second.
-		icon:icons[10,12]
-		cost:40000000000 koros,  10000 Biofuel, 50 prestigio
-		on tick:yield 600000000 koros
-		on tick:yield 600000000 tkor
-		on tick:yield 600000000 tkor2
-		req:1000000000000 tkor
-
-//Buildings2 / Generators
-
-	*IceGen|IceGens
-		name:Ice-Generators
-		desc:Ice-Generators are necessary for Cryo-based modules.<//><b>Effect:</b><.>Produces 1 Ice every 10 seconds.
-		icon:icons[10,12]
-		cost:140000 koros
-		on tick:yield 0.1 Ice
-		on tick:yield 0.1 tice
-		on tick:yield 0.1 tice2
-		req:140000 tkor
-		tag: buildings2
-		
-	*PlasmaGen|PlasmaGens
-		name:Plasma-Generators
-		desc:Converts raw energy into high-powered Plasma for industrial and ship systems.<//><b>Effect:</b><.>Produces 1 Plasma every 10 seconds.
-		icon:icons[10,12]
-		cost:10000000 koros
-		on tick:yield 0.1 Plasma
-		on tick:yield 0.1 tplas
-		on tick:yield 0.1 tplas2
-		req:10000000 tkor
-		tag: buildings2
-		
-	*BiofuelGen|BiofuelGens
-		name:Biofuel-Generators
-		desc:Biofuel is a synthesized energy source made from organic compounds.<//><b>Effect:</b><.>Produces 1 Biofuel every 10 seconds.
-		icon:icons[10,12]
-		cost:3000000000 koros
-		on tick:yield 0.1 Biofuel
-		on tick:yield 0.1 tbio
-		on tick:yield 0.1 tbio2
-		req:300000000 tkor
-		tag: buildings2
-		
-	*CryoFlare|CryoFlares
-		name:CryoFlare Reactor
-		desc:Harnesses extreme thermal fluctuations to generate both searing plasma and subzero ice.<//><b>Effect:</b><.>Produces 1 Ice every 5 seconds. <.>Produces 1 Plasma every 5 seconds.
-		icon:icons[10,12]
-		cost:5000000000 koros
-		on tick:yield 0.2 Plasma
-		on tick:yield 0.2 tplas
-		on tick:yield 0.2 tplas2
-		on tick:yield 0.2 Ice
-		on tick:yield 0.2 tice
-		on tick:yield 0.2 tice2
-		req:5000000000 tkor
-		tag: buildings2
-		
-	*FrostEngine|FrostEngines
-		name:Frostbloom Engine
-		desc:Converts biomass into fuel while generating cryogenic byproducts.<//><b>Effect:</b><.>Produces 1 Ice every 5 seconds. <.>Produces 1 Biofuel every 5 seconds.
-		icon:icons[10,12]
-		cost:50000000000 koros
-		on tick:yield 0.2 Ice
-		on tick:yield 0.2 tice
-		on tick:yield 0.2 tice2
-		on tick:yield 0.2 Biofuel
-		on tick:yield 0.2 tbio
-		on tick:yield 0.2 tbio2
-		req:50000000000 tkor
-		tag: buildings2
-		
-	*PlasmaHarv|PlasmaHarvs
-		name:PlasmaHarvest-Extractor
-		desc:Extracts plasma from energy fields and biofuel from biological materials.<//><b>Effect:</b><.>Produces 1 Plasma every 5 seconds. <.>Produces 1 Biofuel every 5 seconds.
-		icon:icons[10,12]
-		cost:700000000000 koros
-		on tick:yield 0.2 Plasma
-		on tick:yield 0.2 tplas
-		on tick:yield 0.2 tplas2
-		on tick:yield 0.2 Biofuel
-		on tick:yield 0.2 tbio
-		on tick:yield 0.2 tbio2
-		req:700000000000 tkor
-		tag: buildings2
-		
-	*BioSynth|BioSynths
-		name:BioSynth Core
-		desc:Produces biofuel, plasma, and ice through temperature and energy manipulation.<//><b>Effect:</b><.>Produces 1 Ice every 2 seconds. <.>Produces 1 Plasma every 2 seconds. <.>Produces 1 Biofuel every 2 seconds.
-		icon:icons[10,12]
-		cost:1000000000000 koros
-		on tick:yield 0.5 Plasma
-		on tick:yield 0.5 tplas
-		on tick:yield 0.5 tplas2
-		on tick:yield 0.5 Biofuel
-		on tick:yield 0.5 tbio
-		on tick:yield 0.5 tbio2
-		on tick:yield 0.5 Ice
-		on tick:yield 0.5 tice
-		on tick:yield 0.5 tice2
-		req:1000000000000 tkor
-		tag: buildings2
-		
-	*XenoSynth|XenoSynths
-		name:XenoSynth Reactor
-		desc:A highly advanced reactor powered by alien fusion technology, generating biofuel, plasma, and ice.<//><b>Effect:</b><.>Produces 20 Ice every seconds. <.>Produces 10 Plasma every seconds. <.>Produces 5 Biofuel every seconds.
-		icon:icons[10,12]
-		cost:3000000000000 koros, 5 prestigio
-		on tick:yield 10 Plasma
-		on tick:yield 10 tplas
-		on tick:yield 10 tplas2
-		on tick:yield 5 Biofuel
-		on tick:yield 5 tbio
-		on tick:yield 5 tbio2
-		on tick:yield 20 Ice
-		on tick:yield 20 tice
-		on tick:yield 20 tice2
-		req:3000000000000 tkor
-		tag: buildings2
-		
-		
-		
-		
-		
-//Auction posts
-
-
-  *SellBiofuel4
-		name:Sell Biofuel 4
-		text:Sell [?(biofuel4<Biofuel)|<b><#33ff00>[biofuel4] Biofuel </b></#>|<b><#ff3300>[biofuel4] Biofuel </b></#>]for <b><#ffffff>[korosBIO4] </b></#> Koros : [(korosBIO4/biofuel4)] K/unit : Expires in [((timeBIO4-120)*-1)]s
-		desc:Sell [?(biofuel4<Biofuel)|<b><#33ff00>[biofuel4] Biofuel </b></#>|<b><#ff3300>[biofuel4] Biofuel </b></#>]for <b><#ffffff>[korosBIO4] </b></#> Koros : [(korosBIO4/biofuel4)] K/unit : Expires in [((timeBIO4-120)*-1)]s
-		tag:upgrades2
-		req:timeBIO4<120 and timeChkBIO4==0 and AuctionHouse and BiofuelGens>=1
-		on click:
-			if (biofuel4<=Biofuel and timeBIO4<=120)
-				lose SellBiofuel4
-				timeChkBIO4=1
-			else if (timeBIO4>120)
-			  timeChkBIO4=1
-				lose SellBiofuel4
-				
-			else
-				timeChkBIO4=1
-			end
-		end
-		on lose:
-			if (timeChkBIO4==0)
-				koros is koros+korosBIO4
-				tkor is tkor+korosBIO4
-				tkor2 is tkor2+korosBIO4
-				Biofuel is Biofuel-biofuel4
-				log <b><#ffffff>[biofuel4]</b></#> Biofuel sold for <b><#ffffff>[korosBIO4]</b></#> Koros<//>[(korosBIO4/biofuel4)] K/unit
-				timeChkBIO4=1
-				timeBIO4 is 120
-			end
-		end
-		
-	*SellBiofuel5
-		name:Sell Biofuel 5
-		text:Sell [?(biofuel5<Biofuel)|<b><#33ff00>[biofuel5] Biofuel </b></#>|<b><#ff3300>[biofuel5] Biofuel </b></#>]for <b><#ffffff>[korosBIO5] </b></#> Koros : [(korosBIO5/biofuel5)] K/unit : Expires in [((timeBIO5-120)*-1)]s
-		desc:Sell [?(biofuel5<Biofuel)|<b><#33ff00>[biofuel5] Biofuel </b></#>|<b><#ff3300>[biofuel5] Biofuel </b></#>]for <b><#ffffff>[korosBIO5] </b></#> Koros : [(korosBIO5/biofuel5)] K/unit : Expires in [((timeBIO5-120)*-1)]s
-		tag:upgrades2
-		req:timeBIO5<120 and timeChkBIO5==0 and AuctionHouse and BiofuelGens>=1
-		on click:
-			if (biofuel5<=Biofuel and timeBIO5<=120)
-				lose SellBiofuel5
-				timeChkBIO5=1
-			else if (timeBIO5>120)
-			  timeChkBIO5=1
-				lose SellBiofuel5
-				
-			else
-				timeChkBIO5=1
-			end
-		end
-		on lose:
-			if (timeChkBIO5==0)
-				koros is koros+korosBIO5
-				tkor is tkor+korosBIO5
-				tkor2 is tkor2+korosBIO5
-				Biofuel is Biofuel-biofuel5
-				log <b><#ffffff>[biofuel5]</b></#> Biofuel sold for <b><#ffffff>[korosBIO5]</b></#> Koros<//>[(korosBIO5/biofuel5)] K/unit
-				timeChkBIO5=1
-				timeBIO5 is 120
-			end
-		end
-		
-	*SellBiofuel6
-		name:Sell Biofuel 4
-		text:Sell [?(biofuel6<Biofuel)|<b><#33ff00>[biofuel6] Biofuel </b></#>|<b><#ff3300>[biofuel6] Biofuel </b></#>]for <b><#ffffff>[korosBIO6] </b></#> Koros : [(korosBIO6/biofuel6)] K/unit : Expires in [((timeBIO6-120)*-1)]s
-		desc:Sell [?(biofuel6<Biofuel)|<b><#33ff00>[biofuel6] Biofuel </b></#>|<b><#ff3300>[biofuel6] Biofuel </b></#>]for <b><#ffffff>[korosBIO6] </b></#> Koros : [(korosBIO6/biofuel6)] K/unit : Expires in [((timeBIO6-120)*-1)]s
-		tag:upgrades2
-		req:timeBIO6<120 and timeChkBIO6==0 and AuctionHouse and BiofuelGens>=1
-		on click:
-			if (biofuel6<=Biofuel and timeBIO6<=120)
-				lose SellBiofuel6
-				timeChkBIO6=1
-			else if (timeBIO6>120)
-			  timeChkBIO6=1
-				lose SellBiofuel6
-				
-			else
-				timeChkBIO6=1
-			end
-		end
-		on lose:
-			if (timeChkBIO6==0)
-				koros is koros+korosBIO6
-				tkor is tkor+korosBIO6
-				tkor2 is tkor2+korosBIO6
-				Biofuel is Biofuel-biofuel6
-				log <b><#ffffff>[biofuel6]</b></#> Biofuel sold for <b><#ffffff>[korosBIO6]</b></#> Koros<//>[(korosBIO6/biofuel6)] K/unit
-				timeChkBIO6=1
-				timeBIO6 is 120
-			end
-		end
-
-	*BuyBiofuel1
-		name:Buy Biofuel 1
-		text:Buy <b><#ffffff>[biofuel1] </b></#>Biofuel for [?(korosBIO1<koros)|<b><#33ff00>[korosBIO1] Koros </b></#>|<b><#ff3300>[korosBIO1] Koros </b></#>]: [(korosBIO1/biofuel1)] K/unit : Expires in [((timeBIO1-120)*-1)]s
-		desc:Buy <b><#ffffff>[biofuel1] </b></#>Biofuel for [?(korosBIO1<koros)|<b><#33ff00>[korosBIO1] Koros </b></#>|<b><#ff3300>[korosBIO1] Koros </b></#>]: [(korosBIO1/biofuel1)] K/unit : Expires in [((timeBIO1-120)*-1)]s
-		tag:upgrades2
-		req:timeBIO1<120 and timeChkBIO==0 and AuctionHouse and BiofuelGens>=1
-		on click:
-			if (korosBIO1<=koros and timeBIO1<=120)
-				lose BuyBiofuel1
-				timeChkBIO=1
-			else if (timeBIO1>120)
-			  timeChkBIO=1
-				lose BuyBiofuel1	
-			else
-				timeChkBIO=1
-			end
-		end
-		on lose:
-			if (timeChkBIO==0)
-				Biofuel is Biofuel+biofuel1
-				tbio is tbio+biofuel1
-				tbio2 is tbio2+biofuel1
-				koros is koros-korosBIO1
-				log <b><#ffffff>[biofuel1]</b></#> Biofuel bought for <b><#ffffff>[korosBIO1]</b></#> Koros<//>[(korosBIO1/biofuel1)] K/unit
-				timeChkBIO=1
-				timeBIO1 is 120
-			end
-		end
-
-	*BuyBiofuel2
-		name:Buy Biofuel 2
-		text:Buy <b><#ffffff>[biofuel2] </b></#>Biofuel for [?(korosBIO2<koros)|<b><#33ff00>[korosBIO2] Koros </b></#>|<b><#ff3300>[korosBIO2] Koros </b></#>]: [(korosBIO2/biofuel2)] K/unit : Expires in [((timeBIO2-120)*-1)]s
-		desc:Buy <b><#ffffff>[biofuel2] </b></#>Biofuel for [?(korosBIO2<koros)|<b><#33ff00>[korosBIO2] Koros </b></#>|<b><#ff3300>[korosBIO2] Koros </b></#>]: [(korosBIO2/biofuel2)] K/unit : Expires in [((timeBIO2-120)*-1)]s
-		tag:upgrades2
-		req:timeBIO2<120 and timeChkBIO2==0 and AuctionHouse and BiofuelGens>=1
-		on click:
-			if (korosBIO2<=koros and timeBIO2<=120)
-				lose BuyBiofuel2
-				timeChkBIO2=1
-			else if (timeBIO2>120)
-			  timeChkBIO2=1
-				lose BuyBiofuel2
-				
-			else
-				timeChkBIO2=1
-			end
-		end
-		on lose:
-			if (timeChkBIO2==0)
-				Biofuel is Biofuel+biofuel2
-				tbio is tbio+biofuel2
-				tbio2 is tbio2+biofuel2
-				koros is koros-korosBIO2
-				log <b><#ffffff>[biofuel2]</b></#> Biofuel bought for <b><#ffffff>[korosBIO2]</b></#> Koros<//>[(korosBIO2/biofuel2)] K/unit
-				timeChkBIO2=1
-				timeBIO2 is 120
-			end
-		end
-
-	*BuyBiofuel3
-		name:Buy Biofuel 3
-		text:Buy <b><#ffffff>[biofuel3] </b></#>Biofuel for [?(korosBIO3<koros)|<b><#33ff00>[korosBIO3] Koros </b></#>|<b><#ff3300>[korosBIO3] Koros </b></#>]: [(korosBIO3/biofuel3)] K/unit : Expires in [((timeBIO3-120)*-1)]s
-		desc:Buy <b><#ffffff>[biofuel3] </b></#>Biofuel for [?(korosBIO3<koros)|<b><#33ff00>[korosBIO3] Koros </b></#>|<b><#ff3300>[korosBIO3] Koros </b></#>]: [(korosBIO3/biofuel3)] K/unit : Expires in [((timeBIO3-120)*-1)]s
-		tag:upgrades2
-		req:timeBIO3<120 and timeChkBIO3==0 and AuctionHouse and BiofuelGens>=1
-		on click:
-			if (korosBIO3<=koros and timeBIO3<=120)
-				lose BuyBiofuel3
-				timeChkBIO3=1
-			else if (timeBIO3>120)
-			  timeChkBIO3=1
-				lose BuyBiofuel3
-			else
-				timeChkBIO3=1
-			end
-		end
-		on lose:
-			if (timeChkBIO3==0)
-				Biofuel is Biofuel+biofuel3
-				tbio is tbio+biofuel3
-				tbio2 is tbio2+biofuel3
-				koros is koros-korosBIO3
-				log <b><#ffffff>[biofuel3]</b></#> Biofuel bought for <b><#ffffff>[korosBIO3]</b></#> Koros<//>[(korosBIO3/biofuel3)] K/unit
-				timeChkBIO3=1
-				timeBIO3 is 120
-			end
-		end
-		
-
-
-		
-		*SellPlasma4
-		name:Sell Plasma 4
-		text:Sell [?(plasma4<Plasma)|<b><#33ff00>[plasma4] Plasma </b></#>|<b><#ff3300>[plasma4] Plasma </b></#>]for <b><#ffffff>[korosPL4] </b></#> Koros : [(korosPL4/plasma4)] K/unit : Expires in [((timePL4-120)*-1)]s
-		desc:Sell [?(plasma4<Plasma)|<b><#33ff00>[plasma4] Plasma </b></#>|<b><#ff3300>[plasma4] Plasma </b></#>]for <b><#ffffff>[korosPL4] </b></#> Koros : [(korosPL4/plasma4)] K/unit : Expires in [((timePL4-120)*-1)]s
-		tag:upgrades2
-		req:timePL4<120 and timeChkPL4==0 and AuctionHouse and PlasmaGens>=1
-		on click:
-			if (plasma4<=Plasma and timePL4<=120)
-				lose SellPlasma4
-				timeChkPL4=1
-			else if (timePL4>120)
-			  timeChkPL4=1
-				lose SellPlasma4
-			else
-				timeChkPL4=1
-			end
-		end
-		on lose:
-			if (timeChkPL4==0)
-				koros is koros+korosPL4
-				tkor is tkor+korosPL4
-				tkor2 is tkor2+korosPL4
-				Plasma is Plasma-plasma4
-				log <b><#ffffff>[plasma4]</b></#> Plasma sold for <b><#ffffff>[korosPL4]</b></#> Koros<//>[(korosPL4/plasma4)] K/unit
-				timeChkPL4=1
-				timePL4 is 120
-			end
-		end
-		
-	*SellPlasma5
-		name:Sell Plasma 5
-		text:Sell [?(plasma5<Plasma)|<b><#33ff00>[plasma5] Plasma </b></#>|<b><#ff3300>[plasma5] Plasma </b></#>]for <b><#ffffff>[korosPL5] </b></#> Koros : [(korosPL5/plasma5)] K/unit : Expires in [((timePL5-120)*-1)]s
-		desc:Sell [?(plasma5<Plasma)|<b><#33ff00>[plasma5] Plasma </b></#>|<b><#ff3300>[plasma5] Plasma </b></#>]for <b><#ffffff>[korosPL5] </b></#> Koros : [(korosPL5/plasma5)] K/unit : Expires in [((timePL5-120)*-1)]s
-		tag:upgrades2
-		req:timePL5<120 and timeChkPL5==0 and AuctionHouse and PlasmaGens>=1
-		on click:
-			if (plasma5<=Plasma and timePL5<=120)
-				lose SellPlasma5
-				timeChkPL5=1
-			else if (timePL5>120)
-			  timeChkPL5=1
-				lose SellPlasma5
-			else
-				timeChkPL5=1
-			end
-		end
-		on lose:
-			if (timeChkPL5==0)
-				koros is koros+korosPL5
-				tkor is tkor+korosPL5
-				tkor2 is tkor2+korosPL5
-				Plasma is Plasma-plasma5
-				log <b><#ffffff>[plasma5]</b></#> Plasma sold for <b><#ffffff>[korosPL5]</b></#> Koros<//>[(korosPL5/plasma5)] K/unit
-				timeChkPL5=1
-				timePL5 is 120
-			end
-		end
-		
-	*SellPlasma6
-		name:Sell Plasma 4
-		text:Sell [?(plasma6<Plasma)|<b><#33ff00>[plasma6] Plasma </b></#>|<b><#ff3300>[plasma6] Plasma </b></#>]for <b><#ffffff>[korosPL6] </b></#> Koros : [(korosPL6/plasma6)] K/unit : Expires in [((timePL6-120)*-1)]s
-		desc:Sell [?(plasma6<Plasma)|<b><#33ff00>[plasma6] Plasma </b></#>|<b><#ff3300>[plasma6] Plasma </b></#>]for <b><#ffffff>[korosPL6] </b></#> Koros : [(korosPL6/plasma6)] K/unit : Expires in [((timePL6-120)*-1)]s
-		tag:upgrades2
-		req:timePL6<120 and timeChkPL6==0 and AuctionHouse and PlasmaGens>=1
-		on click:
-			if (plasma6<=Plasma and timePL6<=120)
-				lose SellPlasma6
-				timeChkPL6=1
-			else if (timePL6>120)
-			  timeChkPL6=1
-				lose SellPlasma6
-				
-			else
-				timeChkPL6=1
-			end
-		end
-		on lose:
-			if (timeChkPL6==0)
-				koros is koros+korosPL6
-				tkor is tkor+korosPL6
-				tkor2 is tkor2+korosPL6
-				Plasma is Plasma-plasma6
-				log <b><#ffffff>[plasma6]</b></#> Plasma sold for <b><#ffffff>[korosPL6]</b></#> Koros<//>[(korosPL6/plasma6)] K/unit
-				timeChkPL6=1
-				timePL6 is 120
-			end
-		end
-
-	*BuyPlasma1
-		name:Buy Plasma 1
-		text:Buy <b><#ffffff>[plasma1] </b></#>Plasma for [?(korosPL1<koros)|<b><#33ff00>[korosPL1] Koros </b></#>|<b><#ff3300>[korosPL1] Koros </b></#>]: [(korosPL1/plasma1)] K/unit : Expires in [((timePL1-120)*-1)]s
-		desc:Buy <b><#ffffff>[plasma1] </b></#>Plasma for [?(korosPL1<koros)|<b><#33ff00>[korosPL1] Koros </b></#>|<b><#ff3300>[korosPL1] Koros </b></#>]: [(korosPL1/plasma1)] K/unit : Expires in [((timePL1-120)*-1)]s
-		tag:upgrades2
-		req:timePL1<120 and timeChkPL==0 and AuctionHouse and PlasmaGens>=1
-		on click:
-			if (korosPL1<=koros and timePL1<=120)
-				lose BuyPlasma1
-				timeChkPL=1
-			else if (timePL1>120)
-			  timeChkPL=1
-				lose BuyPlasma1
-				
-			else
-				timeChkPL=1
-			end
-		end
-		on lose:
-			if (timeChkPL==0)
-				Plasma is Plasma+plasma1
-				tplas is tplas+plasma1
-				tplas2 is tplas2+plasma1
-				koros is koros-korosPL1
-				log <b><#ffffff>[plasma1]</b></#> Plasma bought for <b><#ffffff>[korosPL1]</b></#> Koros<//>[(korosPL1/plasma1)] K/unit
-				timeChkPL=1
-				timePL1 is 120
-			end
-		end
-
-	*BuyPlasma2
-		name:Buy Plasma 2
-		text:Buy <b><#ffffff>[plasma2] </b></#>Plasma for [?(korosPL2<koros)|<b><#33ff00>[korosPL2] Koros </b></#>|<b><#ff3300>[korosPL2] Koros </b></#>]: [(korosPL2/plasma2)] K/unit : Expires in [((timePL2-120)*-1)]s
-		desc:Buy <b><#ffffff>[plasma2] </b></#>Plasma for [?(korosPL2<koros)|<b><#33ff00>[korosPL2] Koros </b></#>|<b><#ff3300>[korosPL2] Koros </b></#>]: [(korosPL2/plasma2)] K/unit : Expires in [((timePL2-120)*-1)]s
-		tag:upgrades2
-		req:timePL2<120 and timeChkPL2==0 and AuctionHouse and PlasmaGens>=1
-		on click:
-			if (korosPL2<=koros and timePL2<=120)
-				lose BuyPlasma2
-				timeChkPL2=1
-			else if (timePL2>120)
-			  timeChkPL2=1
-				lose BuyPlasma2
-			else
-				timeChkPL2=1
-			end
-		end
-		on lose:
-			if (timeChkPL2==0)
-				Plasma is Plasma+plasma2
-				tplas is tplas+plasma2
-				tplas2 is tplas2+plasma2
-				koros is koros-korosPL2
-				log <b><#ffffff>[plasma2]</b></#> Plasma bought for <b><#ffffff>[korosPL2]</b></#> Koros<//>[(korosPL2/plasma2)] K/unit
-				timeChkPL2=1
-				timePL2 is 120
-			end
-		end
-
-	*BuyPlasma3
-		name:Buy Plasma 3
-		text:Buy <b><#ffffff>[plasma3] </b></#>Plasma for [?(korosPL3<koros)|<b><#33ff00>[korosPL3] Koros </b></#>|<b><#ff3300>[korosPL3] Koros </b></#>]: [(korosPL3/plasma3)] K/unit : Expires in [((timePL3-120)*-1)]s
-		desc:Buy <b><#ffffff>[plasma3] </b></#>Plasma for [?(korosPL3<koros)|<b><#33ff00>[korosPL3] Koros </b></#>|<b><#ff3300>[korosPL3] Koros </b></#>]: [(korosPL3/plasma3)] K/unit : Expires in [((timePL3-120)*-1)]s
-		tag:upgrades2
-		req:timePL3<120 and timeChkPL3==0 and AuctionHouse and PlasmaGens>=1
-		on click:
-			if (korosPL3<=koros and timePL3<=120)
-				lose BuyPlasma3
-				timeChkPL3=1
-			else if (timePL3>120)
-				timeChkPL3=1
-				lose BuyPlasma3
-			else
-				timeChkPL3=1
-			end
-		end
-		on lose:
-			if (timeChkPL3==0)
-				Plasma is Plasma+plasma3
-				tplas is tplas+plasma3
-				tplas2 is tplas2+plasma3
-				koros is koros-korosPL3
-				log <b><#ffffff>[plasma3]</b></#> Plasma bought for <b><#ffffff>[korosPL3]</b></#> Koros<//>[(korosPL3/plasma3)] K/unit
-				timeChkPL3=1
-				timePL3 is 120
-			end
-		end
-		
-
-
-
-
-
-	*SellIce4
-		name:Sell Ice 4
-		text:Sell [?(ice4<Ice)|<b><#33ff00>[ice4] Ice </b></#>|<b><#ff3300>[ice4] Ice </b></#>]for <b><#ffffff>[koros4] </b></#> Koros : [(koros4/ice4)] K/unit : Expires in [((timeB4-120)*-1)]s
-		desc:Sell [?(ice4<Ice)|<b><#33ff00>[ice4] Ice </b></#>|<b><#ff3300>[ice4] Ice </b></#>]for <b><#ffffff>[koros4] </b></#> Koros : [(koros4/ice4)] K/unit : Expires in [((timeB4-120)*-1)]s
-		tag:upgrades2
-		req:timeB4<120 and timeChk4==0 and AuctionHouse
-		on click:
-			if (ice4<=Ice and timeB4<=120)
-				lose SellIce4
-				timeChk4=1
-			else if (timeB4>120)
-			  timeChk4=1
-				lose SellIce4
-			else
-				 timeChk4=1
-			end
-		end
-		on lose:
-			if (timeChk4==0)
-				koros is koros+koros4
-				tkor is tkor+koros4
-				tkor2 is tkor2+koros4
-				Ice is Ice-ice4
-				log <b><#ffffff>[ice4]</b></#> Ice sold for <b><#ffffff>[koros4]</b></#> Koros<//>[(koros4/ice4)] K/unit
-				timeChk4=1
-				timeB4 is 120
-			end
-		end
-		
-	*SellIce5
-		name:Sell Ice 5
-		text:Sell [?(ice5<Ice)|<b><#33ff00>[ice5] Ice </b></#>|<b><#ff3300>[ice5] Ice </b></#>]for <b><#ffffff>[koros5] </b></#> Koros : [(koros5/ice5)] K/unit : Expires in [((timeB5-120)*-1)]s
-		desc:Sell [?(ice5<Ice)|<b><#33ff00>[ice5] Ice </b></#>|<b><#ff3300>[ice5] Ice </b></#>]for <b><#ffffff>[koros5] </b></#> Koros : [(koros5/ice5)] K/unit : Expires in [((timeB5-120)*-1)]s
-		tag:upgrades2
-		req:timeB5<120 and timeChk5==0 and AuctionHouse
-		on click:
-			if (ice5<=Ice and timeB5<=120)
-				lose SellIce5
-				timeChk5=1
-			else if (timeB5>120)
-			  timeChk5=1
-				lose SellIce5
-			else
-				timeChk5=1
-			end
-		end
-		on lose:
-			if (timeChk5==0)
-				koros is koros+koros5
-				tkor is tkor+koros5
-				tkor2 is tkor2+koros5
-				Ice is Ice-ice5
-				log <b><#ffffff>[ice5]</b></#> Ice sold for <b><#ffffff>[koros5]</b></#> Koros<//>[(koros5/ice5)] K/unit
-				timeChk5=1
-				timeB5 is 120
-			end
-		end
-		
-	*SellIce6
-		name:Sell Ice 4
-		text:Sell [?(ice6<Ice)|<b><#33ff00>[ice6] Ice </b></#>|<b><#ff3300>[ice6] Ice </b></#>]for <b><#ffffff>[koros6] </b></#> Koros : [(koros6/ice6)] K/unit : Expires in [((timeB6-120)*-1)]s
-		desc:Sell [?(ice6<Ice)|<b><#33ff00>[ice6] Ice </b></#>|<b><#ff3300>[ice6] Ice </b></#>]for <b><#ffffff>[koros6] </b></#> Koros : [(koros6/ice6)] K/unit : Expires in [((timeB6-120)*-1)]s
-		tag:upgrades2
-		req:timeB6<120 and timeChk6==0 and AuctionHouse
-		on click:
-			if (ice6<=Ice and timeB6<=120)
-				lose SellIce6
-				timeChk6=1
-			else if (timeB6>120)
-			  timeChk6=1
-				lose SellIce6	
-			else
-				timeChk6=1
-			end
-		end
-		on lose:
-			if (timeChk6==0)
-				koros is koros+koros6
-				tkor is tkor+koros6
-				tkor2 is tkor2+koros6
-				Ice is Ice-ice6
-				log <b><#ffffff>[ice6]</b></#> Ice sold for <b><#ffffff>[koros6]</b></#> Koros<//>[(koros6/ice6)] K/unit
-				timeChk6=1
-				timeB6 is 120
-			end
-		end
-
-	*BuyIce1
-		name:Buy Ice 1
-		text:Buy <b><#ffffff>[ice1] </b></#>Ice for [?(koros1<koros)|<b><#33ff00>[koros1] Koros </b></#>|<b><#ff3300>[koros1] Koros </b></#>]: [(koros1/ice1)] K/unit : Expires in [((timeB1-120)*-1)]s
-		desc:Buy <b><#ffffff>[ice1] </b></#>Ice for [?(koros1<koros)|<b><#33ff00>[koros1] Koros </b></#>|<b><#ff3300>[koros1] Koros </b></#>]: [(koros1/ice1)] K/unit : Expires in [((timeB1-120)*-1)]s
-		tag:upgrades2
-		req:timeB1<120 and timeChk==0 and AuctionHouse
-		on click:
-			if (koros1<=koros and timeB1<=120)
-				lose BuyIce1
-				timeChk=1
-			else if (timeB1>120)
-		  	timeChk=1
-			  lose BuyIce1
-			else
-				timeChk=1
-			end
-		end
-		on lose:
-			if (timeChk==0)
-				Ice is Ice+ice1
-				tice is tice+ice1
-				tice2 is tice2+ice1
-				koros is koros-koros1
-				log <b><#ffffff>[ice1]</b></#> Ice bought for <b><#ffffff>[koros1]</b></#> Koros<//>[(koros1/ice1)] K/unit
-				timeChk=1
-				timeB1 is 120
-			end
-		end
-
-	*BuyIce2
-		name:Buy Ice 2
-		text:Buy <b><#ffffff>[ice2] </b></#>Ice for [?(koros2<koros)|<b><#33ff00>[koros2] Koros </b></#>|<b><#ff3300>[koros2] Koros </b></#>]: [(koros2/ice2)] K/unit : Expires in [((timeB2-120)*-1)]s
-		desc:Buy <b><#ffffff>[ice2] </b></#>Ice for [?(koros2<koros)|<b><#33ff00>[koros2] Koros </b></#>|<b><#ff3300>[koros2] Koros </b></#>]: [(koros2/ice2)] K/unit : Expires in [((timeB2-120)*-1)]s
-		tag:upgrades2
-		req:timeB2<120 and timeChk2==0 and AuctionHouse
-		on click:
-			if (koros2<=koros and timeB2<=120)
-				lose BuyIce2
-				timeChk2=1
-			else if (timeB2>120)
-			  timeChk2=1
-				lose BuyIce2
-			else
-				timeChk2=1
-			end
-		end
-		on lose:
-			if (timeChk2==0)
-				Ice is Ice+ice2
-				tice is tice+ice2
-				tice2 is tice2+ice2
-				koros is koros-koros2
-				log <b><#ffffff>[ice2]</b></#> Ice bought for <b><#ffffff>[koros2]</b></#> Koros<//>[(koros2/ice2)] K/unit
-				timeChk2=1
-				timeB2 is 120
-			end
-		end
-
-	*BuyIce3
-		name:Buy Ice 3
-		text:Buy <b><#ffffff>[ice3] </b></#>Ice for [?(koros3<koros)|<b><#33ff00>[koros3] Koros </b></#>|<b><#ff3300>[koros3] Koros </b></#>]: [(koros3/ice3)] K/unit : Expires in [((timeB3-120)*-1)]s
-		desc:Buy <b><#ffffff>[ice3] </b></#>Ice for [?(koros3<koros)|<b><#33ff00>[koros3] Koros </b></#>|<b><#ff3300>[koros3] Koros </b></#>]: [(koros3/ice3)] K/unit : Expires in [((timeB3-120)*-1)]s
-		tag:upgrades2
-		req:timeB3<120 and timeChk3==0 and AuctionHouse
-		on click:
-			if (koros3<=koros and timeB3<=120)
-				lose BuyIce3
-				timeChk3=1
-			else if (timeB3>120)
-			  timeChk3=1
-				lose BuyIce3
-				
-			else
-				timeChk3=1
-			end
-		end
-		on lose:
-			if (timeChk3==0)
-				Ice is Ice+ice3
-				tice is tice+ice3
-				tice2 is tice2+ice3
-				koros is koros-koros3
-				log <b><#ffffff>[ice3]</b></#> Ice bought for <b><#ffffff>[koros3]</b></#> Koros<//>[(koros3/ice3)] K/unit
-				timeChk3=1
-				timeB3 is 120
-			end
-		end
-		
-		
-		
-		
-		
-		
-		
-		
-Upgrades
-	*TEMPLATE
-*OwnedUpgrades
-	name:Owned Upgrades
-	desc:Upgrades you own.
-	tag:auchouse zortMiddle
-	req:AdaptiveCargoRacks
-	no click
+}
+
+.box-header{
+	font-size: 20px;
+  	font-style: italic;
+	font-weight: 1000;
+	text-align: start;
+	padding-left: 20px;
+}
+.box-bit{border-radius:0px;}
+
+.box-header
+{
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	margin-bottom:0px;
+}
+.box-footer
+{
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	margin-top:4px;
+}
+
+#box-resPa{
+width:100% !important;
+justify-content: center;
+	height:5% !important;
+
+
+}
+#box-res.fullWidth
+{	
+	display: flex !important;
+	flex-wrap: nowrap !important;
+	width:100% !important;
 	
 	
-
-*AdaptiveCargoRacks
-		name:Adaptive Cargo Racks
-		desc:Adaptive Cargo Racks automatically adjust to secure cargo using smart restraints and gravity modulation.<//><b>Effect:</b><.>+1 Koros/click<.>Cargo Racks production x2
-		cost:200 koros
-		passive:increase koro yield of koroButton by 1
-		passive:increase tkor yield of koroButton by 1
-		passive:increase tkor2 yield of koroButton by 1
-		passive:multiply yield of CargoRacks by 2
-		req:200 tkor
-
-*HyperLoad
-		name:HyperLoad X-500
-		desc:HyperLoad X-500 is a next-gen automated loader with enhanced speed and precision.<//><b>Effect:</b><.>Automated Loaders production x3
-		cost:2000 koros
-		passive:multiply yield of autoLoaders by 3
-		req:2000 tkor
-
-*RackMaster
-		name:RackMaster3000
-		desc:RackMaster3000 is an advanced cargo rack system designed for maximum efficiency and flexibility.<//><b>Effect:</b><.>Cargo Racks production x10
-		cost:10000 koros
-		passive:multiply yield of CargoRacks by 10
-		req:10000 tkor
-
-*AuctionHouse
-		name:Auction House
-		desc:With the Auction House you can buy and sell goods.<//><b>Effect:</b><.>Cargo Racks production x10
-		cost:200000 koros
-		req:200000 tkor
 	
-*KinBuffer
-		name:Kinetic Impact Buffers
-		desc:Kinetic Impact Buffers absorbs and disperse force to protect cargo from sudden shocks.<//><b>Effect:</b><.>Stasis Crates production x4
-		cost:10000000 koros
-		passive:multiply yield of StasisCrates by 4
-		req:10000000 tkor 
-		
-*SecMatrix
-		name:Secure Freight Matrix
-		desc:Locks cargo within an encrypted containment grid for maximum security.<//><b>Effect:</b><.>Plasma producion +40%<//><.>Ice producion +20%
-		cost:200000000 koros
-		passive:multiply yield of Plasma by 1.40
-		passive:multiply yield of tplas by 1.40
-		passive:multiply yield of tplas2 by 1.40
-		passive:multiply yield of Ice by 1.20
-		passive:multiply yield of tice by 1.20
-		passive:multiply yield of tice2 by 1.20
-		req:120000000 tkor
-
-  *EmGrid
-		name:Emergency Force-Field Grid
-		desc:Uses rapid-deployment energy shields to safeguard critical cargo.<//><b>Effect:</b><.>Cryo-Containers production x20
-		cost:400000000 koros
-		passive:multiply yield of CryoCons by 20
-		req:500000000 tkor
-		
-	*Growth
-		name:Growth Accelerator
-		desc:A core upgrade that applies a percentage-based increase to all Koros-generating activities.<//><b>Effect:</b><.>Koros producion +10%
-		cost:2000000000 koros
-		passive:multiply yield of koros by 1.10
-		passive:multiply yield of tkor by 1.10
-		passive:multiply yield of tkor2 by 1.10
-		req:60000000000 tkor
-
-*SpecHUD
-		name:SpectraLink HUD
-		desc:A high-fidelity holo-display with ultra-responsive gesture tracking.<//><b>Effect:</b><.>Holo-Interface Modules production x2
-		cost:20000000000 koros 
-		passive:multiply yield of HoloMods by 2
-		req:14000000000 tkor
-		
-*QuanVault
-		name:QuantumVault XC
-		desc:Employs quantum field compression to store massive loads in a fraction of the space.<//><b>Effect:</b><.>Hyper-Compression Crates production x10
-		cost:14000000000 koros 
-		passive:multiply yield of HyperCrates by 10
-		req:14500000000 tkor
-		
-*ZeroAnchor
-		name:Zero-G Anchor Points
-		desc:Employs quantum field compression to store massive loads in a fraction of the space.<//><b>Effect:</b><.>Zero-G Storages Crates production x3
-		cost:90000000000 koros 
-		passive:multiply yield of ZeroGs by 3
-		req:100000000000 tkor
-		
-	*CryoFreezer
-		name:CryoPlasma Freezer
-		desc:Your Ice-Generators creates intense cold, converting vapor into solid ice with minimal energy consumption.<//><b>Effect:</b><.>Ice-Generators production x2
-		cost:40000000000 koros, 10000 Plasma
-		passive:multiply yield of IceGens by 2
-		req:400000000000 tkor
-		
-	*IonStorm
-		name:IonStorm Reactor
-		desc:Harnesses the power of ion storms to generate vast amounts of plasma with minimal energy input.<//><b>Effect:</b><.>Plasma-Generators production x2
-		cost:1200000000000 koros, 5000 Biofuel
-		passive:multiply yield of PlasmaGens by 2
-		req:800000000000 tkor
-
-  *GreenFusion
-		name:GreenFusion BioCore
-		desc:Combines biofuel synthesis with green energy fusion techniques to create a sustainable and powerful fuel source.<//><b>Effect:</b><.>Biofuel-Generators production x2
-		cost:4000000000000 koros, 20000 Ice, 15000 Plasma
-		passive:multiply yield of BiofuelGens by 2
-		req:2000000000000 tkor
-		
-	*CryoBioFusion
-		name:CryoBioFusion Array
-		desc:A comprehensive system that integrates biological fuel production, cryogenic cooling, and frost-based energy harvesting for optimized resource management.<//><b>Effect:</b><.>CryoFlare Reactor production x2<.>Frostbloom Engines production x2<.>PlasmaHarvest-Extractor production x2
-		cost:40000000000000 koros, 20 prestigio
-		passive:multiply yield of CryoFlares by 2
-		passive:multiply yield of FrostEngines by 2
-		passive:multiply yield of PlasmaHarvs by 2
-		req:10000000000000 tkor
-		
-	*XenoCorePrime
-		name:XenoCore Prime Reactor
-		desc:Integrates alien technology to create a fusion reactor that draws on exotic materials for extremely powerful and stable energy production.<//><b>Effect:</b><.>XenoSynth Reactor production x4
-		cost:80000000000000 koros, 60 prestigio
-		passive:multiply yield of XenoSynths by 4
-		req:20000000000000 tkor
-
-*AucHouse
-		name:Auction House
-		desc:Buy and sell goods.
-		tag:upgrades2 auchouse
-		req:AuctionHouse
-		no click
-
-*GoodsNum
-		name:Owned Goods Numbers
-		text:[?(Ice==0)||Ice : <b><#ffffff>[Ice]</b></#> ([Ice:ps]/s)][?(Plasma==0)|| : Plasma : <b><#ffffff>[Plasma]</b></#> ([Plasma:ps]/s)][?(Biofuel==0)|| : Biofuel : <b><#ffffff>[Biofuel]</b></#> ([Biofuel:ps]/s)]
-		desc:Goods you have in your cargo.
-		tag:upgrades2
-		req:AuctionHouse
-		no click
-
-*Goods
-		name:Owned Goods
-		desc:Goods you have in your cargo.
-		tag:upgrades2 auchouse
-		req:AuctionHouse
-		no click
+	z-index:100;
+	position:absolute;
+}
+#box-things-Resources
+{	
+	display: flex !important;
+	flex-wrap: nowrap !important;
+width:100% !important;
+justify-content: space-evenly;
+	height:5% !important;
 	
+}.tag-restop{
+float:left !important;
+	width: 40em;
+text-align: start !important;
+left: 7.5vw;
+}
+#box-main
+{
+	left:0px;
+	top:0px;
+	bottom:0px;
+	overflow:hidden;
+	width:19%;
+	position:absolute;
+margin-bottom: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+#box-buttons
+{
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	position:absolute;
+}
+#box-store
+{
+	right:0px;
+	top:32px;
+	bottom:0px;
+	width:80% !important;
+	position:absolute;
+	margin-bottom: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+#box-buildings,#box-upgrades, #box-buildings2,#box-upgrades2
+{
+	top:0px;
+	bottom:0px;
+	width:49%;
+	right:0%;
+	overflow-x:hidden;
+	overflow-y:auto;
+	position:absolute;
+}
+#box-buildings, #box-upgrades2
+{right:51%;}
+
+#box-buildings, #box-upgrades
+{bottom: 52%;}
 
 
 
-*ResetPrestige
-		name:Gain Anomaly Fragments.
-		text:Sell all cargo and components for <b><#ffffff>[tkor2*0.00000000001]</b></#> Anomaly Fragments<//><.>The amount is proporsional to total Koros earned.<//>(Previous runs included)
-		desc:Sell all cargo and components for <b>[tkor2*0.01]</b> Anomaly Fragments.<//><b>Effect:</b><.>Gain Anomaly Fragments, proporsional to total Koros. -[tkor]-[tkor2]-
-		tag:prestige upgrades2
-		req:tkor>600000000000 and tkor2<1000000000000000000000000000000000000000000
-		on earn:log <b>Cargo and components sold.<//>
-		on earn:log <b>[tkor2*0.00000000001] Anomaly Fragments</b> earned.
-		on earn:
-			yield (tkor2*0.00000000001) prestigio
-			lose notTag:prestige
-			lose ResetPrestige
-		end
-
-
-*ResetPrestige2
-		name:Gain Shadow Core
-		text:Reset everything, even your Anomaly Fragments, gaining <b><#ffffff>1</b></#> Shadow Core.<.>Complete the game.
-		desc:Reset everything, even your Anomaly Fragments, gaining <b><#ffffff>1</b></#> Shadow Core.<//><b>Effect:</b><.>Complete the game and start from scratch with a Shadow Core.
-		tag:prestige upgrades2
-		req:tkor>600000000000 and tkor2>=1000000000000000000000000000000000000000000
-		on earn:log <b>You gain a Shadow Core.
-		on earn:
-			lose notTag:prestige2
-			yield 1 prestigio2
-			lose ResetPrestige2
-		end
-		
-//Upgrades2
-
-
-Achievements
-	*TEMPLATE
-
-*korosAchiev2
-		name:Cosmic Merchant
-		desc:Have <b>1,000</b> Koros.
-		req:1000 koros
-		tag:prestige prestige2
-*korosAchiev3
-		name:Millionaire
-		desc:Have <b>1,000,000</b> Koros.
-		req:1000000 koros
-		tag:prestige prestige2
-*korosAchiev4
-		name:Billionaire
-		desc:Have <b>1,000,000,000</b> Koros.
-		req:1000000000 koros
-		tag:prestige prestige2
-*korosAchiev5
-		name:Trillionaire
-		desc:Have <b>1,000,000,000,000</b> Koros.
-		req:1000000000000 koros
-		tag:prestige prestige2
 
 
 
-*korosPsAchiev1
-		name:Koros Collector
-		desc:Produce <b>10</b> Koros per second.
-		req:10 koros per second
-		tag:prestige prestige2
-
-*korosPsAchiev2
-		name:Steady Stream
-		desc:Produce <b>100</b> Koros per second.
-		req:100 koros per second
-		tag:prestige prestige2
-		
-	*korosPsAchiev3
-		name:Profit Pioneer
-		desc:Produce <b>1,000</b> Koros per second.
-		req:1000 koros per second
-		tag:prestige prestige2
-		
-	*korosPsAchiev4
-		name:The Koro Machine
-		desc:Produce <b>10,000</b> Koros per second.
-		req:10000 koros per second
-		tag:prestige prestige2
-		
-	*korosPsAchiev5
-		name:Infinite Loop
-		desc:Produce <b>100,000</b> Koros per second.
-		req:100000 koros per second
-		tag:prestige prestige2
-		
-	*korosPsAchiev6
-		name:Hyper-Economy
-		desc:Produce <b>1,000,000</b> Koros per second.
-		req:1000000 koros per second
-		tag:prestige prestige2
-		
-	*korosPsAchiev7
-		name:Koro Overload
-		desc:Produce <b>1,000,000,000</b> Koros per second.
-		req:1000 koros per second
-		tag:prestige prestige2
-		
-	*Achiev1
-		name:The Start of the Journey
-		desc:Buy a Cargo Rack.
-		req:(CargoRacks>=1)
-		tag:prestige prestige2
-
-*Achiev2
-		name:Cargo Cadet
-		desc:Have <b>10</b> Automated Loaders.
-		req:(autoLoaders>=10)
-		tag:prestige prestige2
-		
-	*Achiev3
-		name:Packed and Ready
-		desc:Have <b>15</b> Retractable Loading Arms.
-		req:(RetArms>=15)
-		tag:prestige prestige2
-		
-	*Achiev4
-		name:Deep Freeze
-		desc:Have <b>20</b> Genetic Cryo Storages.
-		req:(GenCryos>=20)
-		tag:prestige prestige2
-		
-	*Achiev5
-		name:Vault of the Void
-		desc:Have <b>25</b> Cryo-Containers.
-		req:(CryoCons>=25)
-		tag:prestige prestige2
-		
-	*Achiev6
-		name:Smooth Operator
-		desc:Have <b>30</b> Stasis Crates.
-		req:(StasisCrates>=30)
-		tag:prestige prestige2
-		
-	*Achiev7
-		name:Chilled to Perfection
-		desc:Have <b>40</b> Plasma-Cooled Storages.
-		req:(PlasmaCools>=40)
-		tag:prestige prestige2
-	
-	*Achiev8
-		name:Hyper-Compression Expert
-		desc:Have <b>45</b> Hyper-Compression Crates.
-		req:(HyperCrates>=45)
-		tag:prestige prestige2
-		
-	*Achiev9
-		name:Master of the Hold
-		desc:Have <b>50</b> Holo-Interface Modules.
-		req:(HoloMods>=50)
-		tag:prestige prestige2
-		
-				
-	*Achiev10
-		name:Gravity Tamer
-		desc:Have <b>55</b> Zero-G Storages.
-		req:(ZeroGs>=55)
-		tag:prestige prestige2
-		
-	*Achiev11
-		name:Quantum Packer
-		desc:Have <b>60</b> Quantum Computing Nodes.
-		req:(QNodes>=60)
-		tag:prestige prestige2
-		
-	*Achiev12
-		name:Xeno Trader
-		desc:Have <b>65</b> Xenotech Seals.
-		req:(XenoSeals>=65)
-		tag:prestige prestige2
-		
-	*Achiev13
-		name:Dimensional Hoarder
-		desc:Have <b>70</b> Matter Phase Lockers.
-		req:(MatterPhases>=70)
-		tag:prestige prestige2
-		
-	*afAchiev
-		name:Echoes of the Unknown
-		desc:Gain Anomaly Fragments.<//>
-		req:1 prestigio
-		tag:prestige prestige2
-
-	*afAchiev2
-		name:Cosmic Salvager
-		desc:Have <b>100 Anomaly Fragments</b>.<//>
-		req:100 prestigio
-		tag:prestige prestige2
-
-	*afAchiev3
-		name:Beyond the Veil
-		desc:Have <b>1,000 Anomaly Fragments</b>.<//>
-		req:1000 prestigio
-		tag:prestige prestige2
-
-	*afAchiev4
-		name:Rift Explorer
-		desc:Have <b>10,000 Anomaly Fragments</b>.<//>
-		req:10000 prestigio
-		tag:prestige prestige2
-
-	*afAchiev5
-		name:Shattered Reality
-		desc:Have <b>100,000 Anomaly Fragments</b>.<//>
-		req:100000 prestigio
-		tag:prestige prestige2
-
-	*afAchiev6
-		name:Singularity Trader
-		desc:Have <b>1,000,000 Anomaly Fragments</b>.<//>
-		req:1000000 prestigio
-		tag:prestige prestige2
-	
-	*afAchiev7
-		name:Tear in the Fabric
-		desc:Have <b>1,000,000,000 Anomaly Fragments</b>.<//>
-		req:1000000000 prestigio
-		tag:prestige prestige2
-	
-	*afAchiev8
-		name:The Last Fragment
-		desc:Have <b>1,000,000,000,000 Anomaly Fragments</b>.<//>
-		req:1000000000000 prestigio
-		tag:prestige prestige2
-		
-	*scAchiev1
-		name:Dark Ascendant
-		desc:Have a <b>Shadow Core</b>.
-		req:1 prestigio2
-		tag:prestige prestige2
-		
+.thing
+{
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+	cursor:pointer;
+}
+.thing:hover,.thing.lit
+{
+	background:#ffc000;
+}
 
 
-CSS
+
+.upgrade.owned,.achiev.owned
+{
+	color:#ffc000;
+	background:#00000000;
+}
+.thing-text,.thing-costs{
+
+font-weight:bold;
+font-size: 16px;
+
+}
+
+.building
+{
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+	display:block;
+	margin-right:0px;
+	font-size:14px;
+}
+.building, .upgrade{
+padding-left: 4px;
+}
+
+
+.fullWidth
+{
+	display:block;
+	margin-left:0px;
+	margin-right:0px;
+	z-index:10;
+}
+#game .fullWidth
+{
+	height:auto;
+	min-height:auto;
+}
+
+.fullWidth:before,.fullWidth:after
+{
+	content:'';
+	height:1px;
+	position:absolute;
+	left:0px;
+	right:0px;
+	z-index:-1;
+}
+.fullWidth:before{top:-1px;}
+.fullWidth:after{bottom:-1px;}
+
+.fullWidth .thing-icon
+{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.fullWidth .thing-text
+{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+
+
+#box-buildingsHeader{
+top: 0px;
+width:49%;
+left: 0%;
+position: absolute;
+height: 32px;
+
+
+
+
+}
+
+#box-upgradesHeader{
+top: 0px;
+width:49%;
+right: 0%;
+position: absolute;
+height: 32px;
+}
+
+#box-buildings2Header{
+top: 51%;
+width:49%;
+right: 0%;
+position: absolute;
+height: 32px;
+
+
+
+
+}
+
+#box-upgrades2Header{
+top: 51%;
+width:49%;
+left: 0%;
+position: absolute;
+height: 32px;
+}
+
+#box-logHeader{
+opacity: 1;
+position: absolute;
+top: 51%;
+width: 86%;
+left: 0px;
+height: 32px;
+margin-left: 2%;
+margin-right: 2%;
+}
+
+
+#box-buildingsHeader:before, #box-upgradesHeader:before, #box-buildings2Header:before, #box-upgrades2Header:before, #box-logHeader:before{
+
+height: 10px;
+
+
+	content: '';
+    position: absolute;
+    top: 0; left: 0;
+    border-top: 16px solid #00110e;
+    border-right: 16px solid #ffc000;
+    width: 0;
+}
+
+
+
+
+
+
+#box-buildings, #box-upgrades{
+top: 32px;
+border: thick solid #ffc000;
+color:#ffc000;
+}
+
+#box-buildings2, #box-upgrades2{
+
+top: 51%;
+margin-top: 32px;
+border: thick solid #ffc000;
+color:#ffc000;
+}
+
+.building:hover, .upgrade:hover{
+transition: 0.2s;
+color: #00110e;
+background: #ffc000;
+
+}
+
+.building:active, .upgrade:active{
+transition: 0.3s;
+color: #ffc000;
+background: #00110e;
+
+}
+
+#bulkDisplay{
+position: absolute;
+left: 0%;
+top: 0px;
+}
+.upgrade{
+width:100%;
+
+}
+
+.thing-text, .thing-costs{
+
+padding: 8px;
+text-shadow: 0px 0px 0px #000;
+
+}.box{
+text-shadow: 0px 0px 0px #000;
+
+}
+
+#box-log{
+position: absolute !important;
+opacity: 1 !important;
+top: 51%;
+margin-top: 32px;
+left: 0% !important;
+bottom: 0%;
+width: 86% !important;
+background:#00110e;
+color:#ffc000;
+border: thick solid #ffc000;
+
+	margin-left: 2%;
+	margin-right: 2%;
+}
+#logOuter{
+background:#00110e;
+color:#ffc000;
+
+
+}
+#logInner{
+display: flex;
+flex-direction: column;
+padding: 5%;
+background:#00110e;
+color:#ffc000;
+overflow:auto;
+}
+ 
+#box-things-Buttons{
+position: absolute;
+height: 50%;
+top: 0%;
+width: 100%;
+}
+
+.wobble {
+    animation: wobble 1.5s;
+    animation-duration: 1.5s;
+    transition: transform 1.00s ease-out;
+   
+}
+ 
+@keyframes wobble {
+0% {
+    opacity: 0.6;
+    transform: scale(1);
+}
+20% {
+    opacity: 1;
+    transform: scale(1);
+}
+100%
+    opacity: 1;
+    transform: scale(1);
+}
+}
+::-webkit-scrollbar{
+width: 0.5vw !important;
+
+}
+#log::-webkit-scrollbar, #box-upgrades::-webkit-scrollbar, #box-buildings::-webkit-scrollbar, #box-upgrades2::-webkit-scrollbar, #box-buildings2::-webkit-scrollbar {
+    width: 0.5vw !important;
+}
+#log::-webkit-scrollbar-thumb, #box-upgrades::-webkit-scrollbar-thumb, #box-buildings::-webkit-scrollbar-thumb, #box-upgrades2::-webkit-scrollbar-thumb, #box-buildings2::-webkit-scrollbar-thumb {
+   background: #ffc00099 !important;
+    box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
+}
+#log::-webkit-scrollbar-thumb:hover, #box-upgrades::-webkit-scrollbar-thumb:hover, #box-buildings::-webkit-scrollbar-thumb:hover, #box-upgrades2::-webkit-scrollbar-thumb:hover, #box-buildings2::-webkit-scrollbar-thumb:hover {
+   background: #ffc000 !important;
+    box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
+}
+
+#log::-webkit-scrollbar-track, #box-upgrades::-webkit-scrollbar-track, #box-buildings::-webkit-scrollbar-track, #box-upgrades2::-webkit-scrollbar-track, #box-buildings2::-webkit-scrollbar-track {
+   background: #00110e !important;
+    box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
   
+}
+
+.thing.bigButton{
+position: absolute !important;
+margin-left: -100%;
+margin-top: -30%;
+margin-right: 10%;
+
+position: absolute;
+width: 10vw;
+height: 10vw;
+top: 28vh;
+left: 23vw;
+}
+
+.thing.bigButton .thing-icon{
+
+
+background-size: contain !important;
+}
+
+.popup, #tooltip, .toast {
+    background: #00110e;
+    color: #ffc000 ;
+    border-radius: 0px;
+    box-sizing: border-box;
+    padding: 8px 8px;
+ 	border: thick solid #ffc000;
+	box-shadow: none !important;
+	text-shadow: none !important;
+
+font-weight:bold;
+}
+
+ 
+#tooltipContent{
+color: #ffc000;
+font-weight: 100;
+ 
+font-weight:bold;
+}
+
+#tooltip .desc, .listing.b, .listing b{
+
+color: #ffc000;
+
+}
+#tooltip .thing-icon{
+
+}.tooltipPoint{
+border: 0px !important;
+box-shadow: none !important;
+text-shadow: none !important;
+color: #ffc000;
+visibility: hidden;
+}
+#box-things-sortup, #box-things-sortup2, #box-things-Upgrades, #box-things-upgrades2  /*if necessary, change this to the name of the box containing your upgrades. it should start with "box-things" and you can use inspect element to find it*/
+{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center; /*you can change this to "flex-start" if you want upgrades aligned to the left*/
+	flex-direction: column-reverse;
+}
+
+#box-things-Buildings, #box-things-buildings2{
+	display:flex;
+    flex-wrap:wrap;
+    justify-content:center; /*you can change this to "flex-start" if you want upgrades aligned to the left*/
+	flex-direction: column-reverse;
+}
+
+.tag-sortup, .tag-sortup2, .building, .upgrade2.notOwned, .upgrade2.cantAfford{
+    order:3;
+}
+.upgrade.notOwned {
+    order:3;
+}
+.tag-zortMiddle{
+
+  order: 2;
+
+}
+.upgrade.owned, .upgrade2.owned
+{
+    order:1;
+}
+.achiev:hover{
+margin-right: -1px;
+margin-top: -0.8px;
+border: 1px solid #ffc000;
+color: #00110e;
+background: #ffc000;
+
+}.achiev{
+margin-right: -1px;
+margin-top: -0.8px;
+border: 1px solid #ffc000;
+color: #ffc000;
+background: #00110e;
+
+}
+
+.systemButton{
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    background: #00110e;
+    box-shadow: none;
+    padding: 4px 6px;
+    margin: 2px;
+    position: relative;
+border: 1px solid #ffc00099;
+}
+.systemButton:hover {
+    
+    background: #00110e;
+    
+border: 1px solid #ffc000;
+}
+
+.tickbox.on:before {
+    background: #ffc000;
+	box-shadow: none;
+}
+
+.tickbox, .footerTitle{
+color: #ffc000;
+}
+
+.tickbox:before{
+background: #00110e;
+}
+.res .thing-text{
+
+/*font-size: 2vh;
+padding: 1vh;
+letter-spacing: 0.1vh;*/
+}
+
+.tag-auchouse{
+
+transition: 0.2s;
+color: #00110e !important;
+background: #ffc000 !important;
+
+
+}.tag-auchouse:active{
+
+transition: 0.2s;
+color: #ffc000 !important;
+background: #00110e !important;
+
+
+}
+
+#game.filtersOn .shadowed{
+
+
+filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.0));
+
+}
+
+.thing.bigButton:hover, .thing-icon:hover {
+background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 0.00s ease-out;
+    transition: transform 0.00s ease-in;
+	
+	
+}.thing.bigButton:hover .thing-icon{transform:scale(1);}
+
+#tooltip .thing-icon{
+display: none;
+}
