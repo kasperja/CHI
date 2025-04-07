@@ -1088,6 +1088,7 @@ Buildings
 				
 			else
 				timeChkBIO4=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1118,6 +1119,7 @@ Buildings
 				
 			else
 				timeChkBIO5=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1148,6 +1150,7 @@ Buildings
 				
 			else
 				timeChkBIO6=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1177,6 +1180,7 @@ Buildings
 				lose BuyBiofuel1	
 			else
 				timeChkBIO=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1207,6 +1211,7 @@ Buildings
 				
 			else
 				timeChkBIO2=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1236,6 +1241,7 @@ Buildings
 				lose BuyBiofuel3
 			else
 				timeChkBIO3=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1268,6 +1274,7 @@ Buildings
 				lose SellPlasma4
 			else
 				timeChkPL4=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1297,6 +1304,7 @@ Buildings
 				lose SellPlasma5
 			else
 				timeChkPL5=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1327,6 +1335,7 @@ Buildings
 				
 			else
 				timeChkPL6=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1357,6 +1366,7 @@ Buildings
 				
 			else
 				timeChkPL=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1386,6 +1396,7 @@ Buildings
 				lose BuyPlasma2
 			else
 				timeChkPL2=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1415,6 +1426,7 @@ Buildings
 				lose BuyPlasma3
 			else
 				timeChkPL3=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1449,6 +1461,7 @@ Buildings
 				lose SellIce4
 			else
 				 timeChk4=1
+				 log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1478,6 +1491,7 @@ Buildings
 				lose SellIce5
 			else
 				timeChk5=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1507,6 +1521,7 @@ Buildings
 				lose SellIce6	
 			else
 				timeChk6=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1536,6 +1551,7 @@ Buildings
 			  lose BuyIce1
 			else
 				timeChk=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1565,6 +1581,7 @@ Buildings
 				lose BuyIce2
 			else
 				timeChk2=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
@@ -1595,6 +1612,7 @@ Buildings
 				
 			else
 				timeChk3=1
+				log Can't afford. <//>Post cleared.
 			end
 		end
 		on lose:
