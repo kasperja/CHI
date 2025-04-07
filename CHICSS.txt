@@ -69,13 +69,14 @@
 	display: flex !important;
 	flex-wrap: nowrap !important;
 width:100% !important;
-justify-content: space-evenly !important;
+justify-content: space-evenly;
 	height:5% !important;
 	
 }.tag-restop{
 float:left !important;
 	width: 100%;
-text-align: center !important;
+text-align: start !important;
+left: 7.5vw;
 }
 #box-main
 {
