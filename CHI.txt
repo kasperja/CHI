@@ -1077,7 +1077,7 @@ Buildings
 		text:Sell [?(biofuel4<Biofuel)|<b><#33ff00>[biofuel4] Biofuel </b></#>|<b><#ff3300>[biofuel4] Biofuel </b></#>]for <b><#ffffff>[korosBIO4] </b></#> Koros : [(korosBIO4/biofuel4)] K/unit : Expires in [((timeBIO4-120)*-1)]s
 		desc:Sell [?(biofuel4<Biofuel)|<b><#33ff00>[biofuel4] Biofuel </b></#>|<b><#ff3300>[biofuel4] Biofuel </b></#>]for <b><#ffffff>[korosBIO4] </b></#> Koros : [(korosBIO4/biofuel4)] K/unit : Expires in [((timeBIO4-120)*-1)]s
 		tag:upgrades2
-		req:timeBIO4<120 and AuctionHouse and BiofuelGens>=1
+		req:timeBIO4<120 and timeChkBIO4==0 and AuctionHouse and BiofuelGens>=1
 		on click:
 			if (biofuel4<=Biofuel and timeBIO4<=120)
 				lose SellBiofuel4
@@ -1107,7 +1107,7 @@ Buildings
 		text:Sell [?(biofuel5<Biofuel)|<b><#33ff00>[biofuel5] Biofuel </b></#>|<b><#ff3300>[biofuel5] Biofuel </b></#>]for <b><#ffffff>[korosBIO5] </b></#> Koros : [(korosBIO5/biofuel5)] K/unit : Expires in [((timeBIO5-120)*-1)]s
 		desc:Sell [?(biofuel5<Biofuel)|<b><#33ff00>[biofuel5] Biofuel </b></#>|<b><#ff3300>[biofuel5] Biofuel </b></#>]for <b><#ffffff>[korosBIO5] </b></#> Koros : [(korosBIO5/biofuel5)] K/unit : Expires in [((timeBIO5-120)*-1)]s
 		tag:upgrades2
-		req:timeBIO5<120 and AuctionHouse and BiofuelGens>=1
+		req:timeBIO5<120 and timeChkBIO5==0 and AuctionHouse and BiofuelGens>=1
 		on click:
 			if (biofuel5<=Biofuel and timeBIO5<=120)
 				lose SellBiofuel5
@@ -1137,7 +1137,7 @@ Buildings
 		text:Sell [?(biofuel6<Biofuel)|<b><#33ff00>[biofuel6] Biofuel </b></#>|<b><#ff3300>[biofuel6] Biofuel </b></#>]for <b><#ffffff>[korosBIO6] </b></#> Koros : [(korosBIO6/biofuel6)] K/unit : Expires in [((timeBIO6-120)*-1)]s
 		desc:Sell [?(biofuel6<Biofuel)|<b><#33ff00>[biofuel6] Biofuel </b></#>|<b><#ff3300>[biofuel6] Biofuel </b></#>]for <b><#ffffff>[korosBIO6] </b></#> Koros : [(korosBIO6/biofuel6)] K/unit : Expires in [((timeBIO6-120)*-1)]s
 		tag:upgrades2
-		req:timeBIO6<120 and AuctionHouse and BiofuelGens>=1
+		req:timeBIO6<120 and timeChkBIO6==0 and AuctionHouse and BiofuelGens>=1
 		on click:
 			if (biofuel6<=Biofuel and timeBIO6<=120)
 				lose SellBiofuel6
@@ -1167,7 +1167,7 @@ Buildings
 		text:Buy <b><#ffffff>[biofuel1] </b></#>Biofuel for [?(korosBIO1<koros)|<b><#33ff00>[korosBIO1] Koros </b></#>|<b><#ff3300>[korosBIO1] Koros </b></#>]: [(korosBIO1/biofuel1)] K/unit : Expires in [((timeBIO1-120)*-1)]s
 		desc:Buy <b><#ffffff>[biofuel1] </b></#>Biofuel for [?(korosBIO1<koros)|<b><#33ff00>[korosBIO1] Koros </b></#>|<b><#ff3300>[korosBIO1] Koros </b></#>]: [(korosBIO1/biofuel1)] K/unit : Expires in [((timeBIO1-120)*-1)]s
 		tag:upgrades2
-		req:timeBIO1<120 and AuctionHouse and BiofuelGens>=1
+		req:timeBIO1<120 and timeChkBIO==0 and AuctionHouse and BiofuelGens>=1
 		on click:
 			if (korosBIO1<=koros and timeBIO1<=120)
 				lose BuyBiofuel1
@@ -1196,7 +1196,7 @@ Buildings
 		text:Buy <b><#ffffff>[biofuel2] </b></#>Biofuel for [?(korosBIO2<koros)|<b><#33ff00>[korosBIO2] Koros </b></#>|<b><#ff3300>[korosBIO2] Koros </b></#>]: [(korosBIO2/biofuel2)] K/unit : Expires in [((timeBIO2-120)*-1)]s
 		desc:Buy <b><#ffffff>[biofuel2] </b></#>Biofuel for [?(korosBIO2<koros)|<b><#33ff00>[korosBIO2] Koros </b></#>|<b><#ff3300>[korosBIO2] Koros </b></#>]: [(korosBIO2/biofuel2)] K/unit : Expires in [((timeBIO2-120)*-1)]s
 		tag:upgrades2
-		req:timeBIO2<120 and AuctionHouse and BiofuelGens>=1
+		req:timeBIO2<120 and timeChkBIO2==0 and AuctionHouse and BiofuelGens>=1
 		on click:
 			if (korosBIO2<=koros and timeBIO2<=120)
 				lose BuyBiofuel2
@@ -1226,7 +1226,7 @@ Buildings
 		text:Buy <b><#ffffff>[biofuel3] </b></#>Biofuel for [?(korosBIO3<koros)|<b><#33ff00>[korosBIO3] Koros </b></#>|<b><#ff3300>[korosBIO3] Koros </b></#>]: [(korosBIO3/biofuel3)] K/unit : Expires in [((timeBIO3-120)*-1)]s
 		desc:Buy <b><#ffffff>[biofuel3] </b></#>Biofuel for [?(korosBIO3<koros)|<b><#33ff00>[korosBIO3] Koros </b></#>|<b><#ff3300>[korosBIO3] Koros </b></#>]: [(korosBIO3/biofuel3)] K/unit : Expires in [((timeBIO3-120)*-1)]s
 		tag:upgrades2
-		req:timeBIO3<120 and AuctionHouse and BiofuelGens>=1
+		req:timeBIO3<120 and timeChkBIO3==0 and AuctionHouse and BiofuelGens>=1
 		on click:
 			if (korosBIO3<=koros and timeBIO3<=120)
 				lose BuyBiofuel3
@@ -1258,7 +1258,7 @@ Buildings
 		text:Sell [?(plasma4<Plasma)|<b><#33ff00>[plasma4] Plasma </b></#>|<b><#ff3300>[plasma4] Plasma </b></#>]for <b><#ffffff>[korosPL4] </b></#> Koros : [(korosPL4/plasma4)] K/unit : Expires in [((timePL4-120)*-1)]s
 		desc:Sell [?(plasma4<Plasma)|<b><#33ff00>[plasma4] Plasma </b></#>|<b><#ff3300>[plasma4] Plasma </b></#>]for <b><#ffffff>[korosPL4] </b></#> Koros : [(korosPL4/plasma4)] K/unit : Expires in [((timePL4-120)*-1)]s
 		tag:upgrades2
-		req:timePL4<120 and AuctionHouse and PlasmaGens>=1
+		req:timePL4<120 and timeChkPL4==0 and AuctionHouse and PlasmaGens>=1
 		on click:
 			if (plasma4<=Plasma and timePL4<=120)
 				lose SellPlasma4
@@ -1287,7 +1287,7 @@ Buildings
 		text:Sell [?(plasma5<Plasma)|<b><#33ff00>[plasma5] Plasma </b></#>|<b><#ff3300>[plasma5] Plasma </b></#>]for <b><#ffffff>[korosPL5] </b></#> Koros : [(korosPL5/plasma5)] K/unit : Expires in [((timePL5-120)*-1)]s
 		desc:Sell [?(plasma5<Plasma)|<b><#33ff00>[plasma5] Plasma </b></#>|<b><#ff3300>[plasma5] Plasma </b></#>]for <b><#ffffff>[korosPL5] </b></#> Koros : [(korosPL5/plasma5)] K/unit : Expires in [((timePL5-120)*-1)]s
 		tag:upgrades2
-		req:timePL5<120 and AuctionHouse and PlasmaGens>=1
+		req:timePL5<120 and timeChkPL5==0 and AuctionHouse and PlasmaGens>=1
 		on click:
 			if (plasma5<=Plasma and timePL5<=120)
 				lose SellPlasma5
@@ -1316,7 +1316,7 @@ Buildings
 		text:Sell [?(plasma6<Plasma)|<b><#33ff00>[plasma6] Plasma </b></#>|<b><#ff3300>[plasma6] Plasma </b></#>]for <b><#ffffff>[korosPL6] </b></#> Koros : [(korosPL6/plasma6)] K/unit : Expires in [((timePL6-120)*-1)]s
 		desc:Sell [?(plasma6<Plasma)|<b><#33ff00>[plasma6] Plasma </b></#>|<b><#ff3300>[plasma6] Plasma </b></#>]for <b><#ffffff>[korosPL6] </b></#> Koros : [(korosPL6/plasma6)] K/unit : Expires in [((timePL6-120)*-1)]s
 		tag:upgrades2
-		req:timePL6<120 and AuctionHouse and PlasmaGens>=1
+		req:timePL6<120 and timeChkPL6==0 and AuctionHouse and PlasmaGens>=1
 		on click:
 			if (plasma6<=Plasma and timePL6<=120)
 				lose SellPlasma6
@@ -1346,7 +1346,7 @@ Buildings
 		text:Buy <b><#ffffff>[plasma1] </b></#>Plasma for [?(korosPL1<koros)|<b><#33ff00>[korosPL1] Koros </b></#>|<b><#ff3300>[korosPL1] Koros </b></#>]: [(korosPL1/plasma1)] K/unit : Expires in [((timePL1-120)*-1)]s
 		desc:Buy <b><#ffffff>[plasma1] </b></#>Plasma for [?(korosPL1<koros)|<b><#33ff00>[korosPL1] Koros </b></#>|<b><#ff3300>[korosPL1] Koros </b></#>]: [(korosPL1/plasma1)] K/unit : Expires in [((timePL1-120)*-1)]s
 		tag:upgrades2
-		req:timePL1<120 and AuctionHouse and PlasmaGens>=1
+		req:timePL1<120 and timeChkPL==0 and AuctionHouse and PlasmaGens>=1
 		on click:
 			if (korosPL1<=koros and timePL1<=120)
 				lose BuyPlasma1
@@ -1376,7 +1376,7 @@ Buildings
 		text:Buy <b><#ffffff>[plasma2] </b></#>Plasma for [?(korosPL2<koros)|<b><#33ff00>[korosPL2] Koros </b></#>|<b><#ff3300>[korosPL2] Koros </b></#>]: [(korosPL2/plasma2)] K/unit : Expires in [((timePL2-120)*-1)]s
 		desc:Buy <b><#ffffff>[plasma2] </b></#>Plasma for [?(korosPL2<koros)|<b><#33ff00>[korosPL2] Koros </b></#>|<b><#ff3300>[korosPL2] Koros </b></#>]: [(korosPL2/plasma2)] K/unit : Expires in [((timePL2-120)*-1)]s
 		tag:upgrades2
-		req:timePL2<120 and AuctionHouse and PlasmaGens>=1
+		req:timePL2<120 and timeChkPL2==0 and AuctionHouse and PlasmaGens>=1
 		on click:
 			if (korosPL2<=koros and timePL2<=120)
 				lose BuyPlasma2
@@ -1405,7 +1405,7 @@ Buildings
 		text:Buy <b><#ffffff>[plasma3] </b></#>Plasma for [?(korosPL3<koros)|<b><#33ff00>[korosPL3] Koros </b></#>|<b><#ff3300>[korosPL3] Koros </b></#>]: [(korosPL3/plasma3)] K/unit : Expires in [((timePL3-120)*-1)]s
 		desc:Buy <b><#ffffff>[plasma3] </b></#>Plasma for [?(korosPL3<koros)|<b><#33ff00>[korosPL3] Koros </b></#>|<b><#ff3300>[korosPL3] Koros </b></#>]: [(korosPL3/plasma3)] K/unit : Expires in [((timePL3-120)*-1)]s
 		tag:upgrades2
-		req:timePL3<120 and AuctionHouse and PlasmaGens>=1
+		req:timePL3<120 and timeChkPL3==0 and AuctionHouse and PlasmaGens>=1
 		on click:
 			if (korosPL3<=koros and timePL3<=120)
 				lose BuyPlasma3
@@ -1439,7 +1439,7 @@ Buildings
 		text:Sell [?(ice4<Ice)|<b><#33ff00>[ice4] Ice </b></#>|<b><#ff3300>[ice4] Ice </b></#>]for <b><#ffffff>[koros4] </b></#> Koros : [(koros4/ice4)] K/unit : Expires in [((timeB4-120)*-1)]s
 		desc:Sell [?(ice4<Ice)|<b><#33ff00>[ice4] Ice </b></#>|<b><#ff3300>[ice4] Ice </b></#>]for <b><#ffffff>[koros4] </b></#> Koros : [(koros4/ice4)] K/unit : Expires in [((timeB4-120)*-1)]s
 		tag:upgrades2
-		req:timeB4<120 and AuctionHouse
+		req:timeB4<120 and timeChk4==0 and AuctionHouse
 		on click:
 			if (ice4<=Ice and timeB4<=120)
 				lose SellIce4
@@ -1468,7 +1468,7 @@ Buildings
 		text:Sell [?(ice5<Ice)|<b><#33ff00>[ice5] Ice </b></#>|<b><#ff3300>[ice5] Ice </b></#>]for <b><#ffffff>[koros5] </b></#> Koros : [(koros5/ice5)] K/unit : Expires in [((timeB5-120)*-1)]s
 		desc:Sell [?(ice5<Ice)|<b><#33ff00>[ice5] Ice </b></#>|<b><#ff3300>[ice5] Ice </b></#>]for <b><#ffffff>[koros5] </b></#> Koros : [(koros5/ice5)] K/unit : Expires in [((timeB5-120)*-1)]s
 		tag:upgrades2
-		req:timeB5<120 and AuctionHouse
+		req:timeB5<120 and timeChk5==0 and AuctionHouse
 		on click:
 			if (ice5<=Ice and timeB5<=120)
 				lose SellIce5
@@ -1497,7 +1497,7 @@ Buildings
 		text:Sell [?(ice6<Ice)|<b><#33ff00>[ice6] Ice </b></#>|<b><#ff3300>[ice6] Ice </b></#>]for <b><#ffffff>[koros6] </b></#> Koros : [(koros6/ice6)] K/unit : Expires in [((timeB6-120)*-1)]s
 		desc:Sell [?(ice6<Ice)|<b><#33ff00>[ice6] Ice </b></#>|<b><#ff3300>[ice6] Ice </b></#>]for <b><#ffffff>[koros6] </b></#> Koros : [(koros6/ice6)] K/unit : Expires in [((timeB6-120)*-1)]s
 		tag:upgrades2
-		req:timeB6<120 and AuctionHouse
+		req:timeB6<120 and timeChk6==0 and AuctionHouse
 		on click:
 			if (ice6<=Ice and timeB6<=120)
 				lose SellIce6
@@ -1526,7 +1526,7 @@ Buildings
 		text:Buy <b><#ffffff>[ice1] </b></#>Ice for [?(koros1<koros)|<b><#33ff00>[koros1] Koros </b></#>|<b><#ff3300>[koros1] Koros </b></#>]: [(koros1/ice1)] K/unit : Expires in [((timeB1-120)*-1)]s
 		desc:Buy <b><#ffffff>[ice1] </b></#>Ice for [?(koros1<koros)|<b><#33ff00>[koros1] Koros </b></#>|<b><#ff3300>[koros1] Koros </b></#>]: [(koros1/ice1)] K/unit : Expires in [((timeB1-120)*-1)]s
 		tag:upgrades2
-		req:timeB1<120 and AuctionHouse
+		req:timeB1<120 and timeChk==0 and AuctionHouse
 		on click:
 			if (koros1<=koros and timeB1<=120)
 				lose BuyIce1
@@ -1555,7 +1555,7 @@ Buildings
 		text:Buy <b><#ffffff>[ice2] </b></#>Ice for [?(koros2<koros)|<b><#33ff00>[koros2] Koros </b></#>|<b><#ff3300>[koros2] Koros </b></#>]: [(koros2/ice2)] K/unit : Expires in [((timeB2-120)*-1)]s
 		desc:Buy <b><#ffffff>[ice2] </b></#>Ice for [?(koros2<koros)|<b><#33ff00>[koros2] Koros </b></#>|<b><#ff3300>[koros2] Koros </b></#>]: [(koros2/ice2)] K/unit : Expires in [((timeB2-120)*-1)]s
 		tag:upgrades2
-		req:timeB2<120 and AuctionHouse
+		req:timeB2<120 and timeChk2==0 and AuctionHouse
 		on click:
 			if (koros2<=koros and timeB2<=120)
 				lose BuyIce2
@@ -1584,7 +1584,7 @@ Buildings
 		text:Buy <b><#ffffff>[ice3] </b></#>Ice for [?(koros3<koros)|<b><#33ff00>[koros3] Koros </b></#>|<b><#ff3300>[koros3] Koros </b></#>]: [(koros3/ice3)] K/unit : Expires in [((timeB3-120)*-1)]s
 		desc:Buy <b><#ffffff>[ice3] </b></#>Ice for [?(koros3<koros)|<b><#33ff00>[koros3] Koros </b></#>|<b><#ff3300>[koros3] Koros </b></#>]: [(koros3/ice3)] K/unit : Expires in [((timeB3-120)*-1)]s
 		tag:upgrades2
-		req:timeB3<120 and AuctionHouse
+		req:timeB3<120 and timeChk3==0 and AuctionHouse
 		on click:
 			if (koros3<=koros and timeB3<=120)
 				lose BuyIce3
