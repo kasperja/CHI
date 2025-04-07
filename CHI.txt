@@ -11,7 +11,7 @@ Settings
 	building cost increase:110%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, https://raw.githubusercontent.com/kasperja/CHI/main/BlankSpritesheet.png
-	stylesheet:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/CHICSS.txt
+	stylesheet:https://cargoholdidle.neocities.org/CHICSS-NC
 	no particles
 	no bulk particles
 
@@ -932,7 +932,7 @@ Buildings
 		on tick:yield 8000000 koros
 		on tick:yield 8000000 tkor
 		on tick:yield 8000000 tkor2
-		req:10000000000 tkor
+		req:20000000000 tkor
 		
 	*XenoSeal|XenoSeals
 		name:Xenotech Seals
