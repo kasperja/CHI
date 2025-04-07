@@ -4,14 +4,14 @@ Let's make a game!
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.80
+	version:0.81
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
 	building cost increase:110%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, https://raw.githubusercontent.com/kasperja/CHI/main/BlankSpritesheet.png
-	stylesheet:https://cargoholdidle.neocities.org/CHICSS-NC
+	stylesheet:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/CHICSS.txt
 	no particles
 	no bulk particles
 
@@ -72,8 +72,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.80</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.80</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.81</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.81</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
