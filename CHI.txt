@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Write the game description here.<//>Click to play the game!
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.79
+	version:0.80
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -72,8 +72,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.79</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.79</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.80</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.80</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -1076,14 +1076,15 @@ Buildings
 		tag:upgrades2
 		req:timeBIO4<120 and timeChkBIO4==0 and AuctionHouse and BiofuelGens>=1
 		on click:
-			if (biofuel4<=Biofuel)
+			if (biofuel4<=Biofuel and timeBIO4<=120)
 				lose SellBiofuel4
 				timeChkBIO4=1
 			else if (timeBIO4>120)
+			  timeChkBIO4=1
 				lose SellBiofuel4
-				timeChkBIO4=1
+				
 			else
-				log Can't afford
+				timeChkBIO4=1
 			end
 		end
 		on lose:
@@ -1105,14 +1106,15 @@ Buildings
 		tag:upgrades2
 		req:timeBIO5<120 and timeChkBIO5==0 and AuctionHouse and BiofuelGens>=1
 		on click:
-			if (biofuel5<=Biofuel)
+			if (biofuel5<=Biofuel and timeBIO5<=120)
 				lose SellBiofuel5
 				timeChkBIO5=1
 			else if (timeBIO5>120)
+			  timeChkBIO5=1
 				lose SellBiofuel5
-				timeChkBIO5=1
+				
 			else
-				log Can't afford
+				timeChkBIO5=1
 			end
 		end
 		on lose:
@@ -1134,14 +1136,15 @@ Buildings
 		tag:upgrades2
 		req:timeBIO6<120 and timeChkBIO6==0 and AuctionHouse and BiofuelGens>=1
 		on click:
-			if (biofuel6<=Biofuel)
+			if (biofuel6<=Biofuel and timeBIO6<=120)
 				lose SellBiofuel6
 				timeChkBIO6=1
 			else if (timeBIO6>120)
+			  timeChkBIO6=1
 				lose SellBiofuel6
-				timeChkBIO6=1
+				
 			else
-				log Can't afford
+				timeChkBIO6=1
 			end
 		end
 		on lose:
@@ -1163,14 +1166,14 @@ Buildings
 		tag:upgrades2
 		req:timeBIO1<120 and timeChkBIO==0 and AuctionHouse and BiofuelGens>=1
 		on click:
-			if (korosBIO1<=koros)
+			if (korosBIO1<=koros and timeBIO1<=120)
 				lose BuyBiofuel1
 				timeChkBIO=1
 			else if (timeBIO1>120)
-				lose BuyBiofuel1
-				timeChkBIO=1
+			  timeChkBIO=1
+				lose BuyBiofuel1	
 			else
-				log Can't afford
+				timeChkBIO=1
 			end
 		end
 		on lose:
@@ -1192,14 +1195,15 @@ Buildings
 		tag:upgrades2
 		req:timeBIO2<120 and timeChkBIO2==0 and AuctionHouse and BiofuelGens>=1
 		on click:
-			if (korosBIO2<=koros)
+			if (korosBIO2<=koros and timeBIO2<=120)
 				lose BuyBiofuel2
 				timeChkBIO2=1
 			else if (timeBIO2>120)
+			  timeChkBIO2=1
 				lose BuyBiofuel2
-				timeChkBIO2=1
+				
 			else
-				log Can't afford
+				timeChkBIO2=1
 			end
 		end
 		on lose:
@@ -1221,14 +1225,14 @@ Buildings
 		tag:upgrades2
 		req:timeBIO3<120 and timeChkBIO3==0 and AuctionHouse and BiofuelGens>=1
 		on click:
-			if (korosBIO3<=koros)
+			if (korosBIO3<=koros and timeBIO3<=120)
 				lose BuyBiofuel3
 				timeChkBIO3=1
 			else if (timeBIO3>120)
+			  timeChkBIO3=1
 				lose BuyBiofuel3
-				timeChkBIO3=1
 			else
-				log Can't afford
+				timeChkBIO3=1
 			end
 		end
 		on lose:
@@ -1253,14 +1257,14 @@ Buildings
 		tag:upgrades2
 		req:timePL4<120 and timeChkPL4==0 and AuctionHouse and PlasmaGens>=1
 		on click:
-			if (plasma4<=Plasma)
+			if (plasma4<=Plasma and timePL4<=120)
 				lose SellPlasma4
 				timeChkPL4=1
 			else if (timePL4>120)
+			  timeChkPL4=1
 				lose SellPlasma4
-				timeChkPL4=1
 			else
-				log Can't afford
+				timeChkPL4=1
 			end
 		end
 		on lose:
@@ -1282,14 +1286,14 @@ Buildings
 		tag:upgrades2
 		req:timePL5<120 and timeChkPL5==0 and AuctionHouse and PlasmaGens>=1
 		on click:
-			if (plasma5<=Plasma)
+			if (plasma5<=Plasma and timePL5<=120)
 				lose SellPlasma5
 				timeChkPL5=1
 			else if (timePL5>120)
+			  timeChkPL5=1
 				lose SellPlasma5
-				timeChkPL5=1
 			else
-				log Can't afford
+				timeChkPL5=1
 			end
 		end
 		on lose:
@@ -1311,14 +1315,15 @@ Buildings
 		tag:upgrades2
 		req:timePL6<120 and timeChkPL6==0 and AuctionHouse and PlasmaGens>=1
 		on click:
-			if (plasma6<=Plasma)
+			if (plasma6<=Plasma and timePL6<=120)
 				lose SellPlasma6
 				timeChkPL6=1
 			else if (timePL6>120)
+			  timeChkPL6=1
 				lose SellPlasma6
-				timeChkPL6=1
+				
 			else
-				log Can't afford
+				timeChkPL6=1
 			end
 		end
 		on lose:
@@ -1340,14 +1345,15 @@ Buildings
 		tag:upgrades2
 		req:timePL1<120 and timeChkPL==0 and AuctionHouse and PlasmaGens>=1
 		on click:
-			if (korosPL1<=koros)
+			if (korosPL1<=koros and timePL1<=120)
 				lose BuyPlasma1
 				timeChkPL=1
 			else if (timePL1>120)
+			  timeChkPL=1
 				lose BuyPlasma1
-				timeChkPL=1
+				
 			else
-				log Can't afford
+				timeChkPL=1
 			end
 		end
 		on lose:
@@ -1369,14 +1375,14 @@ Buildings
 		tag:upgrades2
 		req:timePL2<120 and timeChkPL2==0 and AuctionHouse and PlasmaGens>=1
 		on click:
-			if (korosPL2<=koros)
+			if (korosPL2<=koros and timePL2<=120)
 				lose BuyPlasma2
 				timeChkPL2=1
 			else if (timePL2>120)
+			  timeChkPL2=1
 				lose BuyPlasma2
-				timeChkPL2=1
 			else
-				log Can't afford
+				timeChkPL2=1
 			end
 		end
 		on lose:
@@ -1398,14 +1404,14 @@ Buildings
 		tag:upgrades2
 		req:timePL3<120 and timeChkPL3==0 and AuctionHouse and PlasmaGens>=1
 		on click:
-			if (korosPL3<=koros)
+			if (korosPL3<=koros and timePL3<=120)
 				lose BuyPlasma3
 				timeChkPL3=1
 			else if (timePL3>120)
-				lose BuyPlasma3
 				timeChkPL3=1
+				lose BuyPlasma3
 			else
-				log Can't afford
+				timeChkPL3=1
 			end
 		end
 		on lose:
@@ -1432,14 +1438,14 @@ Buildings
 		tag:upgrades2
 		req:timeB4<120 and timeChk4==0 and AuctionHouse
 		on click:
-			if (ice4<=Ice)
+			if (ice4<=Ice and timeB4<=120)
 				lose SellIce4
 				timeChk4=1
 			else if (timeB4>120)
+			  timeChk4=1
 				lose SellIce4
-				timeChk4=1
 			else
-				log Can't afford
+				 timeChk4=1
 			end
 		end
 		on lose:
@@ -1461,14 +1467,14 @@ Buildings
 		tag:upgrades2
 		req:timeB5<120 and timeChk5==0 and AuctionHouse
 		on click:
-			if (ice5<=Ice)
+			if (ice5<=Ice and timeB5<=120)
 				lose SellIce5
 				timeChk5=1
 			else if (timeB5>120)
+			  timeChk5=1
 				lose SellIce5
-				timeChk5=1
 			else
-				log Can't afford
+				timeChk5=1
 			end
 		end
 		on lose:
@@ -1490,14 +1496,14 @@ Buildings
 		tag:upgrades2
 		req:timeB6<120 and timeChk6==0 and AuctionHouse
 		on click:
-			if (ice6<=Ice)
+			if (ice6<=Ice and timeB6<=120)
 				lose SellIce6
 				timeChk6=1
 			else if (timeB6>120)
-				lose SellIce6
-				timeChk6=1
+			  timeChk6=1
+				lose SellIce6	
 			else
-				log Can't afford
+				timeChk6=1
 			end
 		end
 		on lose:
@@ -1519,14 +1525,14 @@ Buildings
 		tag:upgrades2
 		req:timeB1<120 and timeChk==0 and AuctionHouse
 		on click:
-			if (koros1<=koros)
+			if (koros1<=koros and timeB1<=120)
 				lose BuyIce1
 				timeChk=1
 			else if (timeB1>120)
-				lose BuyIce1
-				timeChk=1
+		  	timeChk=1
+			  lose BuyIce1
 			else
-				log Can't afford
+				timeChk=1
 			end
 		end
 		on lose:
@@ -1548,14 +1554,14 @@ Buildings
 		tag:upgrades2
 		req:timeB2<120 and timeChk2==0 and AuctionHouse
 		on click:
-			if (koros2<=koros)
+			if (koros2<=koros and timeB2<=120)
 				lose BuyIce2
 				timeChk2=1
 			else if (timeB2>120)
+			  timeChk2=1
 				lose BuyIce2
-				timeChk2=1
 			else
-				log Can't afford
+				timeChk2=1
 			end
 		end
 		on lose:
@@ -1577,14 +1583,15 @@ Buildings
 		tag:upgrades2
 		req:timeB3<120 and timeChk3==0 and AuctionHouse
 		on click:
-			if (koros3<=koros)
+			if (koros3<=koros and timeB3<=120)
 				lose BuyIce3
 				timeChk3=1
 			else if (timeB3>120)
+			  timeChk3=1
 				lose BuyIce3
-				timeChk3=1
+				
 			else
-				log Can't afford
+				timeChk3=1
 			end
 		end
 		on lose:
