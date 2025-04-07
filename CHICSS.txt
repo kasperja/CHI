@@ -53,7 +53,16 @@
 	border-top-left-radius:0px;
 	border-top-right-radius:0px;
 	margin-top:4px;
-}#box-res.fullWidth
+}
+
+#box-resPa{
+idth:100% !important;
+justify-content: center;
+	height:5% !important;
+
+
+}
+#box-res.fullWidth
 {	
 	display: flex !important;
 	flex-wrap: nowrap !important;
@@ -74,7 +83,7 @@ justify-content: space-evenly;
 	
 }.tag-restop{
 float:left !important;
-	width: 100%;
+	width: 42%;
 text-align: start !important;
 left: 7.5vw;
 }
