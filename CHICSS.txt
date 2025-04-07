@@ -75,11 +75,7 @@ justify-content: space-evenly !important;
 }.tag-restop{
 float:left !important;
 	width: 100%;
-text-align: start !important;
-}
-.res{
-float: left !important;
-	left: 7vw !important;
+text-align: center !important;
 }
 #box-main
 {
