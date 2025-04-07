@@ -53,9 +53,34 @@
 	border-top-left-radius:0px;
 	border-top-right-radius:0px;
 	margin-top:4px;
+}#box-res.fullWidth
+{	
+	display: flex !important;
+	flex-wrap: nowrap !important;
+	width:100% !important;
+	
+	
+	
+	z-index:100;
+	position:absolute;
 }
-
-
+#box-things-Resources
+{	
+	display: flex !important;
+	flex-wrap: nowrap !important;
+width:100% !important;
+justify-content: space-evenly !important;
+	height:5% !important;
+	
+}.tag-restop{
+float:left !important;
+	width: 100%;
+text-align: start !important;
+}
+.res{
+float: left !important;
+	left: 7vw !important;
+}
 #box-main
 {
 	left:0px;
