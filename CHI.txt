@@ -922,7 +922,7 @@ Buildings
 		on tick:yield 2000000 koros
 		on tick:yield 2000000 tkor
 		on tick:yield 2000000 tkor2
-		req:35000000000 tkor
+		req:20000000000 tkor
 		
 	*QNode|QNodes
 		name:Quantum Computing Nodes
@@ -932,7 +932,7 @@ Buildings
 		on tick:yield 8000000 koros
 		on tick:yield 8000000 tkor
 		on tick:yield 8000000 tkor2
-		req:20000000000 tkor
+		req:35000000000 tkor
 		
 	*XenoSeal|XenoSeals
 		name:Xenotech Seals
