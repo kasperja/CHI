@@ -1050,7 +1050,7 @@ Buildings
 		
 	*XenoSynth|XenoSynths
 		name:XenoSynth Reactor
-		desc:A highly advanced reactor powered by alien fusion technology, generating biofuel, plasma, and ice.<//><b>Effect:</b><.>Produces 20 Ice every seconds. <.>Produces 10 Plasma every seconds. <.>Produces 5 Biofuel every seconds.
+		desc:A highly advanced reactor powered by alien fusion technology, generating biofuel, plasma, and ice.<//><b>Effect:</b><.>Produces 20 Ice every second. <.>Produces 10 Plasma every second. <.>Produces 5 Biofuel every second.
 		icon:icons[10,12]
 		cost:3000000000000 koros, 5 prestigio
 		on tick:yield 10 Plasma
