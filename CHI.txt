@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Upgrade and manage the cargo hold of a spaceship, while trading goods.
 	created:18/03/2025
 	updated:18/03/2025
-	version:0.83
+	version:1.0
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -74,8 +74,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.83</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 0.83</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.0</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.0</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
