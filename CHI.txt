@@ -1671,7 +1671,7 @@ Upgrades
 
 *AuctionHouse
 		name:Auction House
-		desc:With the Auction House you can buy and sell goods.<//><b>Effect:</b><.>Cargo Racks production x10
+		desc:With the Auction House you can buy and sell goods.
 		cost:200000 koros
 		req:200000 tkor
 	
