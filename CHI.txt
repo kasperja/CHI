@@ -1780,14 +1780,14 @@ Upgrades
 		text:[?(Ice==0)||Ice : <b><#ffffff>[Ice]</b></#> ([Ice:ps]/s)][?(Plasma==0)|| : Plasma : <b><#ffffff>[Plasma]</b></#> ([Plasma:ps]/s)][?(Biofuel==0)|| : Biofuel : <b><#ffffff>[Biofuel]</b></#> ([Biofuel:ps]/s)]
 		desc:Goods you have in your cargo.
 		tag:upgrades2
-		req:AuctionHouse
+		req:AuctionHouse or IceGens>=1 or PlasmaGens>=1 or BiofuelGens>=1
 		no click
 
 *Goods
 		name:Owned Goods
 		desc:Goods you have in your cargo.
 		tag:upgrades2 auchouse
-		req:AuctionHouse
+		req:AuctionHouse or IceGens>=1 or PlasmaGens>=1 or BiofuelGens>=1
 		no click
 	
 
