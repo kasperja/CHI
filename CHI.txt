@@ -1979,43 +1979,43 @@ Achievements
 
 	*afAchiev2
 		name:Cosmic Salvager
-		desc:Have <b>100 Anomaly Fragments</b>.<//>
+		desc:Have <b>100</b> Anomaly Fragments.<//>
 		req:100 prestigio
 		tag:prestige prestige2
 
 	*afAchiev3
 		name:Beyond the Veil
-		desc:Have <b>1,000 Anomaly Fragments</b>.<//>
+		desc:Have <b>1,000</b> Anomaly Fragments.<//>
 		req:1000 prestigio
 		tag:prestige prestige2
 
 	*afAchiev4
 		name:Rift Explorer
-		desc:Have <b>10,000 Anomaly Fragments</b>.<//>
+		desc:Have <b>10,000</b> Anomaly Fragments.<//>
 		req:10000 prestigio
 		tag:prestige prestige2
 
 	*afAchiev5
 		name:Shattered Reality
-		desc:Have <b>100,000 Anomaly Fragments</b>.<//>
+		desc:Have <b>100,000</b> Anomaly Fragments.<//>
 		req:100000 prestigio
 		tag:prestige prestige2
 
 	*afAchiev6
 		name:Singularity Trader
-		desc:Have <b>1,000,000 Anomaly Fragments</b>.<//>
+		desc:Have <b>1,000,000</b> Anomaly Fragments.<//>
 		req:1000000 prestigio
 		tag:prestige prestige2
 	
 	*afAchiev7
 		name:Tear in the Fabric
-		desc:Have <b>1,000,000,000 Anomaly Fragments</b>.<//>
+		desc:Have <b>1,000,000,000</b> Anomaly Fragments.<//>
 		req:1000000000 prestigio
 		tag:prestige prestige2
 	
 	*afAchiev8
 		name:The Last Fragment
-		desc:Have <b>1,000,000,000,000 Anomaly Fragments</b>.<//>
+		desc:Have <b>1,000,000,000,000</b> Anomaly Fragments.<//>
 		req:1000000000000 prestigio
 		tag:prestige prestige2
 		
