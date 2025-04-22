@@ -1640,7 +1640,7 @@ Upgrades
 	name:Owned Upgrades
 	desc:Upgrades you own.
 	tag:auchouse zortMiddle
-	req:AdaptiveCargoRacks
+	req:AdaptiveCargoRacks or HyperLoad or RackMaster or AuctionHouse
 	no click
 	
 	
