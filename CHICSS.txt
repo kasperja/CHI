@@ -427,12 +427,60 @@ height: 10vw;
 top: 28vh;
 left: 23vw;
 }
+.thing.bigButtonAnim{
+position: absolute !important;
+margin-left: -100%;
+margin-top: -30%;
+margin-right: 10%;
+
+position: absolute;
+width: 10.2vw;
+height: 10.2vw;
+top: 27.8vh;
+left: 22.9vw;
+}
 
 .thing.bigButton .thing-icon{
 
 
 background-size: contain !important;
+
+
 }
+
+.thing.bigButtonAnim .thing-icon{
+
+
+background-size: contain !important;
+
+
+}
+
+.thing.bigButtonAnim{
+
+
+    pointer-events: none;
+
+
+  background-image: linear-gradient(90deg, #ffc000 50%, transparent 50%), linear-gradient(90deg, #ffc000 50%, transparent 50%), linear-gradient(0deg, #ffc000 50%, transparent 50%), linear-gradient(0deg, #ffc000 50%, transparent 50%);
+background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+background-size: 15px 3px, 15px 3px, 3px 15px, 3px 15px;
+background-position: left top, right bottom, left bottom, right top;
+animation: border-dance 1s infinite linear;
+
+
+
+}
+@keyframes border-dance {
+  0% {
+    background-position: left top, right bottom, left bottom, right top;
+}
+
+100% {
+    background-position: left 15px top, right 15px bottom, left bottom 15px, right top 15px;
+}
+}
+
 
 .popup, #tooltip, .toast {
     background: #00110e;
@@ -575,7 +623,7 @@ filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.0));
 
 }
 
-.thing.bigButton:hover, .thing-icon:hover {
+.thing.bigButton:hover, .thing-icon:hover{
 background-repeat: no-repeat;
     transform: scale(1);
     transition: transform 0.00s ease-out;
