@@ -432,7 +432,7 @@ position: absolute !important;
 margin-left: -100%;
 margin-top: -30%;
 margin-right: 10%;
-animation: wobble 1.5s;
+
 position: absolute;
 width: 10.2vw;
 height: 10.2vw;
@@ -440,6 +440,9 @@ top: 27.8vh;
 left: 22.9vw;
 }
 
+.thing.bigButtonAnim:active{
+animation: wobble 1.5s;
+}
 .thing.bigButton .thing-icon{
 
 
