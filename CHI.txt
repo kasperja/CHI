@@ -2014,6 +2014,13 @@ Achievements
 		req:(MatterPhases>=70)
 		tag:prestige prestige2
 		
+	*Achiev14
+		name:Space Inside Space
+		desc:Have <b>75</b> Abyssal Fold Cores.
+		req:(AbyssalCores>=75)
+		tag:prestige prestige2
+		
+		
 	*afAchiev
 		name:Echoes of the Unknown
 		desc:Gain Anomaly Fragments.<//>
