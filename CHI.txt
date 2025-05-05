@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Upgrade and manage the cargo hold of a spaceship, while trading goods.
 	created:18/03/2025
 	updated:18/03/2025
-	version:1.0
+	version:1.1
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -81,8 +81,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.0</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.0</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.1</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.1</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -370,6 +370,28 @@ Resources
 		show earned
 		hidden when 0
 		tag:prestige prestige2 restop
+		
+	*taf
+		hidden
+		tag:prestige
+		
+	*chktaf
+		on start:
+			if (chktaf > 0)
+			else
+				taf=prestigio:earned
+ 				chktaf=1
+			end
+		end
+		on load:
+			if (chktaf > 0)
+			else
+				taf=prestigio:earned
+ 				chktaf=1
+			end
+		end
+		hidden
+		tag:prestige prestige2
 		
 	*ice1
 		hidden
@@ -960,6 +982,20 @@ Buildings
 		on tick:yield 600000000 tkor
 		on tick:yield 600000000 tkor2
 		req:1000000000000 tkor
+		
+		
+	*AbyssalCores
+		name:Abyssal Fold Cores
+		text:Abyssal Fold Cores
+		desc:Bends pocket dimensions from alien space to store massive cargo volumes in miniature.<//><b>Effect:</b><.>With every level, gain 1,000,000,000 Koros every second for every Anomaly Fragment ever earned (previous runs included).
+		cost:1000 prestigio
+		req:10000 taf
+		on tick:yield (taf*1000000000) koros
+		on tick:yield (taf*1000000000) tkor
+		on tick:yield (taf*1000000000) tkor2
+		tags:buildings
+		cost increase:150%
+		
 
 //Buildings2 / Generators
 
@@ -1810,6 +1846,7 @@ Upgrades
 		on earn:log <b>[tkor2*0.00000000001] Anomaly Fragments</b> earned.
 		on earn:
 			yield (tkor2*0.00000000001) prestigio
+			yield (tkor2*0.00000000001) taf
 			lose notTag:prestige
 			lose ResetPrestige
 		end
