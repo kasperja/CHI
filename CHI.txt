@@ -112,48 +112,48 @@ Buttons
 			if (timeB1>120)
 				lose BuyIce1
 				timeChk=1
-				ice1=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				ice1=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				koros1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeB2>120)
 				lose BuyIce2
 				timeChk2=1
-				ice2=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				ice2=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				koros2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeB3>120)
 				lose BuyIce3
 				timeChk3=1
-				ice3=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				ice3=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				koros3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeB4>120)
 				lose SellIce4
 				timeChk4=1
-				ice4=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				ice4=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				koros4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeB5>120)
 				lose SellIce5
 				timeChk5=1
-				ice5=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				ice5=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				koros5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeB6>120)
 				lose SellIce6
 				timeChk6=1
-				ice6=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)
-				koros6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				ice6=((max(random(5,10),random(Ice:ps*10*1,Ice:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				koros6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on start:lose BuyPlasma1
@@ -184,48 +184,48 @@ Buttons
 			if (timePL1>120)
 				lose BuyPlasma1
 				timeChkPL=1
-				plasma1=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				plasma1=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosPL1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timePL2>120)
 				lose BuyPlasma2
 				timeChkPL2=1
-				plasma2=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				plasma2=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosPL2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timePL3>120)
 				lose BuyPlasma3
 				timeChkPL3=1
-				plasma3=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				plasma3=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosPL3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timePL4>120)
 				lose SellPlasma4
 				timeChkPL4=1
-				plasma4=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				plasma4=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosPL4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timePL5>120)
 				lose SellPlasma5
 				timeChkPL5=1
-				plasma5=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				plasma5=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosPL5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timePL6>120)
 				lose SellPlasma6
 				timeChkPL6=1
-				plasma6=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)
-				korosPL6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				plasma6=((max(random(5,10),random(Plasma:ps*10*1,Plasma:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosPL6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on start:lose BuyBiofuel1
@@ -256,48 +256,48 @@ Buttons
 			if (timeBIO1>120)
 				lose BuyBiofuel1
 				timeChkBIO=1
-				biofuel1=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				biofuel1=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosBIO1=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeBIO2>120)
 				lose BuyBiofuel2
 				timeChkBIO2=1
-				biofuel2=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				biofuel2=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosBIO2=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeBIO3>120)
 				lose BuyBiofuel3
 				timeChkBIO3=1
-				biofuel3=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				biofuel3=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosBIO3=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeBIO4>120)
 				lose SellBiofuel4
 				timeChkBIO4=1
-				biofuel4=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				biofuel4=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosBIO4=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeBIO5>120)
 				lose SellBiofuel5
 				timeChkBIO5=1
-				biofuel5=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				biofuel5=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosBIO5=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		on tick:
 			if (timeBIO6>120)
 				lose SellBiofuel6
 				timeChkBIO6=1
-				biofuel6=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)
-				korosBIO6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)
+				biofuel6=((max(random(5,10),random(Biofuel:ps*10*1,Biofuel:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
+				korosBIO6=((max(random(50,100),random(koros:ps*10*1,koros:ps*20*3)))*10)/max(pow(2,AbyssalCores),1)
 			end
 		end
 		icon:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/TradeButtonNoMargin.png
@@ -987,7 +987,7 @@ Buildings
 	*AbyssalCores
 		name:Abyssal Fold Cores
 		text:Abyssal Fold Cores
-		desc:Bends pocket dimensions from alien space to store massive cargo volumes in miniature.<//><b>Effect:</b><.>With every level, gain 1,000,000,000 Koros every second for every Anomaly Fragment ever earned (previous runs included).
+		desc:Bends pocket dimensions from alien space to store massive cargo volumes in miniature. Unstable fold signatures confuse pricing algorithms and supply detection.<//><b>Effect:</b><.>With every Abyssal Fold Core, gain 1,000,000,000 Koros every second for every Anomaly Fragment ever earned (previous runs included).<.>The Auction House becomes less efficient the more Abyssal Fold Cores you have.
 		cost:1000 prestigio
 		req:10000 taf
 		on tick:yield (taf*1000000000) koros
