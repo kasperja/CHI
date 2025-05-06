@@ -1842,7 +1842,7 @@ Upgrades
 		tag:prestige upgrades2
 		req:tkor>600000000000 and tkor2<1000000000000000000000000000000000000000000
 		on earn:log <b>Cargo and components sold.<//>
-		on earn:log <b>[tkor2*0.00000000001] Anomaly Fragments</b> earned.
+		on earn:log <b><#ffffff>[tkor2*0.00000000001]</#> Anomaly Fragments</b> earned.
 		on earn:
 			yield (tkor2*0.00000000001) prestigio
 			yield (tkor2*0.00000000001) taf
