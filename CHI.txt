@@ -986,12 +986,12 @@ Buildings
 		
 	*AbyssalCores
 		name:Abyssal Fold Cores
-		desc:Bends pocket dimensions from alien space to store massive cargo volumes in miniature. Unstable fold signatures confuse pricing algorithms and supply detection.<//><b>Effect:</b><.>With every Abyssal Fold Core, gain <b>10,000,000</b> Koros every second for every Anomaly Fragment ever earned (previous runs included).<.>The Auction House becomes less efficient the more Abyssal Fold Cores you have.
+		desc:Bends pocket dimensions from alien space to store massive cargo volumes in miniature. Unstable fold signatures confuse pricing algorithms and supply detection.<//><b>Effect:</b><.>With every Abyssal Fold Core, gain <b>100,000,000</b> Koros every second for every Anomaly Fragment ever earned (previous runs included).<.>The Auction House becomes less efficient the more Abyssal Fold Cores you have.
 		cost:1000 prestigio
 		req:10000 taf and 10000000000000 tkor
-		on tick:yield (taf*10000000) koros
-		on tick:yield (taf*10000000) tkor
-		on tick:yield (taf*10000000) tkor2
+		on tick:yield (taf*100000000) koros
+		on tick:yield (taf*100000000) tkor
+		on tick:yield (taf*100000000) tkor2
 		tags:buildings
 		cost increase:150%
 		
