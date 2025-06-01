@@ -1032,7 +1032,7 @@ Buildings
 		tag: buildings2
 		
 	*CryoFlare|CryoFlares
-		name:CryoFlare Reactor
+		name:CryoFlare Reactors
 		desc:Harnesses extreme thermal fluctuations to generate both searing plasma and subzero ice.<//><b>Effect:</b><.>Produces 1 Ice every 5 seconds. <.>Produces 1 Plasma every 5 seconds.
 		icon:icons[10,12]
 		cost:5000000000 koros
@@ -1046,7 +1046,7 @@ Buildings
 		tag: buildings2
 		
 	*FrostEngine|FrostEngines
-		name:Frostbloom Engine
+		name:Frostbloom Engines
 		desc:Converts biomass into fuel while generating cryogenic byproducts.<//><b>Effect:</b><.>Produces 1 Ice every 5 seconds. <.>Produces 1 Biofuel every 5 seconds.
 		icon:icons[10,12]
 		cost:50000000000 koros
@@ -1060,7 +1060,7 @@ Buildings
 		tag: buildings2
 		
 	*PlasmaHarv|PlasmaHarvs
-		name:PlasmaHarvest-Extractor
+		name:PlasmaHarvest-Extractors
 		desc:Extracts plasma from energy fields and biofuel from biological materials.<//><b>Effect:</b><.>Produces 1 Plasma every 5 seconds. <.>Produces 1 Biofuel every 5 seconds.
 		icon:icons[10,12]
 		cost:700000000000 koros
@@ -1074,7 +1074,7 @@ Buildings
 		tag: buildings2
 		
 	*BioSynth|BioSynths
-		name:BioSynth Core
+		name:BioSynth Cores
 		desc:Produces biofuel, plasma, and ice through temperature and energy manipulation.<//><b>Effect:</b><.>Produces 1 Ice every 2 seconds. <.>Produces 1 Plasma every 2 seconds. <.>Produces 1 Biofuel every 2 seconds.
 		icon:icons[10,12]
 		cost:1000000000000 koros
@@ -1091,7 +1091,7 @@ Buildings
 		tag: buildings2
 		
 	*XenoSynth|XenoSynths
-		name:XenoSynth Reactor
+		name:XenoSynth Reactors
 		desc:A highly advanced reactor powered by alien fusion technology, generating biofuel, plasma, and ice.<//><b>Effect:</b><.>Produces 20 Ice every second. <.>Produces 10 Plasma every second. <.>Produces 5 Biofuel every second.
 		icon:icons[10,12]
 		cost:3000000000000 koros, 5 prestigio
