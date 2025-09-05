@@ -1689,7 +1689,7 @@ Upgrades
 
 *AdaptiveCargoRacks
 		name:Adaptive Cargo Racks
-		desc:Adaptive Cargo Racks automatically adjust to secure cargo using smart restraints and gravity modulation.<//><b>Effect:</b><.>+1 Koros/click<.>Cargo Racks production x2
+		desc:Adaptive Cargo Racks automatically adjust to secure cargo using smart restraints and gravity modulation.<//><b>Effect:</b><.>+1 Koro/click<.>Cargo Racks production x2
 		cost:200 koros
 		passive:increase koro yield of koroButton by 1
 		passive:increase tkor yield of koroButton by 1
@@ -2079,3 +2079,4 @@ Achievements
 
 CSS
   
+
