@@ -636,8 +636,6 @@ background-repeat: no-repeat;
 #tooltip .thing-icon{
 display: none;
 }
-.closeButton{
 
-background-color: #00000000;
-}
+
 
