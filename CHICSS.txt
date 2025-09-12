@@ -638,5 +638,6 @@ display: none;
 }
 .closeButton{
 
-visibility: hidden;
+background-color: #00000000;
 }
+
