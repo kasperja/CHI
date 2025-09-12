@@ -636,3 +636,7 @@ background-repeat: no-repeat;
 #tooltip .thing-icon{
 display: none;
 }
+.closeButton{
+
+visibility: hidden;
+}
