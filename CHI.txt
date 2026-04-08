@@ -4,7 +4,7 @@ Let's make a game!
 	desc:Upgrade and manage the cargo hold of a spaceship, while trading goods.
 	created:18/03/2025
 	updated:18/03/2025
-	version:1.1
+	version:1.2
 
 Settings
 	background:https://raw.githubusercontent.com/kasperja/CHI/refs/heads/main/tp.png
@@ -39,6 +39,10 @@ Layout
 *buildings2
 	  icons:hide
     contains:tag:buildings2
+    tooltip origin:left
+*buildings3
+	  icons:hide
+    contains:tag:buildings3
     tooltip origin:left
 *buildings2Header
 	  header:Generators
@@ -81,8 +85,8 @@ Buttons
 		on click:yield 1 koro
 		on click:yield 1 tkor
 		on click:yield 1 tkor2
-		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.1</#>
-		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.1</#>
+		on start:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.2</#>
+		on load:log Welcome to </#></><t>CargoHold Idle</#> <//> Game version: 1.2</#>
 		on load:log Game loaded.
 		on start:lose BuyIce1
 		on load:lose BuyIce1
@@ -843,7 +847,21 @@ Resources
 	*timeChkBIO6
 		hidden
 
-
+*hexHandler3
+    hidden
+    text:[?(uicol=0)|<#002001></#>][?(uicol=1)|<#002002></#>][?(uicol=2)|<#002003></#>][?(uicol=3)|<#002004></#>][?(uicol=4)|<#002005></#>][?(uicol=5)|<#002006></#>]
+    class:hidden hexHandler3
+    tag:hexHandler3
+    
+  *uicol
+    passive: 
+      if (uicol>5) 
+				uicol is 0
+				uichanger is 0
+			end
+		end
+    hidden
+    tag:prestige prestige2
 
 
 Shinies
@@ -852,7 +870,16 @@ Shinies
 Buildings
 	
 	*TEMPLATE
-			
+	
+	*uichanger
+        name:GUI Color
+        text:<#ffffff>GUI Color :</#> <#fde73b>[?(uicol=0)|<b>Yellow</b>][?(uicol=1)|<b>Red</b>][?(uicol=2)|<b>Blue</b>][?(uicol=3)|<b>Green</b>][?(uicol=4)|<b>Pink</b>][?(uicol=5)|<b>Teal</b>]
+        desc:Change the GUI color.
+        on click:uicol = uichanger
+        tag:buildings3 hudchanger
+        limit:7	
+	
+	
 	*CargoRack|CargoRacks
 		name:Cargo Racks
 		desc:Cargo Racks are storage frameworks designed to secure and organize freight in transport vessels.<//><b>Effect:</b><.>Produces 1 Koros every 10 seconds.
@@ -1108,7 +1135,7 @@ Buildings
 		tag: buildings2
 		
 		
-		
+	
 		
 		
 //Auction posts
@@ -2079,4 +2106,3 @@ Achievements
 
 CSS
   
-
